@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Wyckoff Radar: chữ W vàng cát trên nền nâu đất, 4 cột khối lượng dưới chân. Toạ độ khớp scripts/make_icons.py -->
+  <rect width="120" height="120" rx="28" fill="#5A3E2B"/>
+  <polyline points="20,30 37,80 60,45 83,80 100,30" fill="none" stroke="#D9B36A" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="24" y="92" width="12" height="10" rx="2" fill="#D9B36A"/>
+  <rect x="44" y="86" width="12" height="16" rx="2" fill="#D9B36A"/>
+  <rect x="64" y="95" width="12" height="7" rx="2" fill="#D9B36A"/>
+  <rect x="84" y="82" width="12" height="20" rx="2" fill="#D9B36A"/>
+</svg>

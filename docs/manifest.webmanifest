@@ -1,0 +1,16 @@
+{
+  "name": "Wyckoff Radar",
+  "short_name": "Wyckoff",
+  "description": "Cảnh báo điểm mua/thoát theo phương pháp Wyckoff (SC, Spring, Test, SOS, LPS) cho 39 mã — sau phiên.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4EFE4",
+  "theme_color": "#5A3E2B",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
