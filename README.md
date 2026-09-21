@@ -21,7 +21,7 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
 |---|---|---|
 | G0 | Khung: common/, job/push+watchlist+settings, workflow, docs khung, venv, kho nến, icon | ✅ 21/09/2026 |
 | G1 | `job/wyckoff.py` — máy trạng thái vùng đi ngang + 15 sự kiện; `tests/test_wyckoff.py`; `scripts/inspect.py` soi mắt | ✅ 21/09/2026 |
-| G2 | `scripts/measure.py` — đo 11 năm → `reports/`, `docs/data/stats.json`; chốt `events_disabled` | |
+| G2 | `scripts/measure.py` — đo 11 năm → `reports/measure-2026-09-21.md`, `docs/data/stats.json`; chốt `events_disabled` | ✅ 21/09/2026 |
 | G3 | `job/run_daily.py` phần giữa, `scripts/replay.py`, latest/bars.json | |
 | G4 | `docs/` 5 tab theo thiết kế | |
 | G5 | Lên GitHub `tamabc906-coder/wyckoff-radar`, Pages, Secrets, chạy thật | |
@@ -37,6 +37,18 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
   không bao giờ thấy LPS (8 → 17 lần).
 - SC dưới vùng đang có → ưu tiên SC (mở chu kỳ mới), không ghi SOW cùng nến. ST tối đa 3 lần/vùng, chỉ ở GĐ A/B.
 - Soi: `venv\Scripts\python -m scripts.inspect HPG --from 2022-09-15 --to 2023-03-31`, `--count` để xem tần suất.
+
+## Kết quả đo G2 (`reports/measure-2026-09-21.md`, 39 mã, 2016→2026, +10 phiên, mua-đại +0,57 %)
+
+| Sự kiện | n | +10p | t | năm thắng | Kết luận |
+|---|---:|---:|---:|---:|---|
+| **SC** bán tháo cao trào | 244 | **+3,02 %** | 4,2 | 7/10 | ★ duy nhất — vững cả khi bỏ 2022 (+3,67 %) |
+| Spring #3 / Test / LPS / BU | 10 / 55 / 16 / 30 | ≈ 0 … +2 % | < 1,3 | — | không hơn mua-đại; phá đáy vùng < 1 % rồi đóng lại là **rò rỉ** (−2,6 %, 0/8 năm) |
+| SOS (vượt creek có KL) | 97 | −0,20 % | −0,2 | 5/11 | thua đối chứng "Trần+KL+phá đỉnh" (+1,69 %); nền ≥ 20 phiên không giúp |
+| **SOW** phá đáy có KL | 73 | **−3,39 %** | −3,3 | 5/5 | thoát duy nhất có giá trị; thiếu 1 năm so tiêu chí ★ — bật tay nếu muốn |
+| BC / UTAD / LPSY | 622 / 70 / 6 | +2,6 / +0,7 / +9 % | — | — | mẫu đỉnh là tiếp diễn tăng, không dùng |
+
+Mặc định push: chỉ `sc`. Mọi sự kiện khác vẫn gắn nhãn trên Bảng/Biểu đồ. Tách nhóm: `scripts/split.py`.
 
 ## Chạy trên máy
 

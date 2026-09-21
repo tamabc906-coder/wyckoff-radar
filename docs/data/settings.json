@@ -1,1 +1,7 @@
-{"events_disabled": [], "buy_only": false, "history_days": 30, "heartbeat": false, "tr_min_bars": 20}
+{
+ "events_disabled": ["spring3", "test", "sos", "lps", "bu", "bc", "utad", "sow", "lpsy"],
+ "buy_only": false,
+ "history_days": 30,
+ "heartbeat": false,
+ "tr_min_bars": 20
+}
