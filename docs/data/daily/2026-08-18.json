@@ -1,0 +1,18 @@
+{
+ "trade_date": "2026-08-18",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "EIB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 17.0,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

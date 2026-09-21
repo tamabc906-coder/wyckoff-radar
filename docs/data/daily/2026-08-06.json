@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-08-06",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "DCM",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 30.85,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "SZC",
+   "event": "ar",
+   "name": "Hồi phục tự động (AR)",
+   "direction": "watch",
+   "price": 17.22,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

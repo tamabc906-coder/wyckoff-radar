@@ -1,0 +1,36 @@
+{
+ "trade_date": "2026-09-18",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "EIB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 16.4,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "PVS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 33.3,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "SHS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 14.4,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

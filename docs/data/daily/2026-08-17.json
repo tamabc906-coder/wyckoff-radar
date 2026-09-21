@@ -1,0 +1,54 @@
+{
+ "trade_date": "2026-08-17",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "PVD",
+   "event": "spring3",
+   "name": "Spring #3 (KL thấp)",
+   "direction": "buy",
+   "price": 18.15,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "DCM",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 30.55,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "HPG",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 21.2,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "KBC",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 27.05,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "PVS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 28.75,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

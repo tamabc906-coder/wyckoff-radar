@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-08-26",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "PVS",
+   "event": "bc",
+   "name": "Mua cao trào (BC)",
+   "direction": "exit",
+   "price": 32.92,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "TCB",
+   "event": "bc",
+   "name": "Mua cao trào (BC)",
+   "direction": "exit",
+   "price": 33.45,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

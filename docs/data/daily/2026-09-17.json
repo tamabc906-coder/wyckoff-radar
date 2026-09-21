@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-09-17",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "PVS",
+   "event": "ut",
+   "name": "Upthrust (UT)",
+   "direction": "watch",
+   "price": 33.3,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "VDS",
+   "event": "spring2",
+   "name": "Spring #2",
+   "direction": "watch",
+   "price": 10.9,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

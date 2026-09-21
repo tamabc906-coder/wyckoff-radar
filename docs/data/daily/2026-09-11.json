@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-09-11",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "CTG",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 29.95,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "KBC",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 26.5,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

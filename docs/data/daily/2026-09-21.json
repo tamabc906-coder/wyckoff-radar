@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-09-21",
+ "generated_at": "2026-09-21T23:19:20+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "HPG",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 21.1,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}

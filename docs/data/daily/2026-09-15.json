@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-09-15",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "CEO",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 11.8,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "MBS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 16.6,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

@@ -1,0 +1,45 @@
+{
+ "trade_date": "2026-09-14",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "EIB",
+   "event": "sow",
+   "name": "Dấu hiệu suy yếu (SOW)",
+   "direction": "exit",
+   "price": 16.0,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "HPG",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 20.9,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "KBC",
+   "event": "spring2",
+   "name": "Spring #2",
+   "direction": "watch",
+   "price": 26.5,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "PVS",
+   "event": "ut",
+   "name": "Upthrust (UT)",
+   "direction": "watch",
+   "price": 32.6,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

@@ -1,0 +1,18 @@
+{
+ "trade_date": "2026-09-10",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "PVS",
+   "event": "ar",
+   "name": "Hồi phục tự động (AR)",
+   "direction": "watch",
+   "price": 32.25,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}

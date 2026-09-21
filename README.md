@@ -22,7 +22,7 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
 | G0 | Khung: common/, job/push+watchlist+settings, workflow, docs khung, venv, kho nến, icon | ✅ 21/09/2026 |
 | G1 | `job/wyckoff.py` — máy trạng thái vùng đi ngang + 15 sự kiện; `tests/test_wyckoff.py`; `scripts/inspect.py` soi mắt | ✅ 21/09/2026 |
 | G2 | `scripts/measure.py` — đo 11 năm → `reports/measure-2026-09-21.md`, `docs/data/stats.json`; chốt `events_disabled` | ✅ 21/09/2026 |
-| G3 | `job/run_daily.py` phần giữa, `scripts/replay.py`, latest/bars.json | |
+| G3 | `job/run_daily.py`, `scripts/replay.py` (30 phiên lịch sử), `latest.json`/`bars.json`/`daily/` | ✅ 21/09/2026 |
 | G4 | `docs/` 5 tab theo thiết kế | |
 | G5 | Lên GitHub `tamabc906-coder/wyckoff-radar`, Pages, Secrets, chạy thật | |
 

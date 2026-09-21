@@ -1,0 +1,27 @@
+{
+ "trade_date": "2026-09-16",
+ "generated_at": "2026-09-21T23:16:24+07:00",
+ "late": false,
+ "replay": true,
+ "signals": [
+  {
+   "symbol": "SHB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 11.5,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "TPB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 14.0,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}
