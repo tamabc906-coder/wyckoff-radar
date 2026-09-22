@@ -13,9 +13,19 @@
   "HPG:st"
  ],
  "devices": {
-  "n": 0,
-  "source": "none",
-  "vapid": false,
-  "checked_at": "2026-09-22T12:41:23+07:00"
- }
+  "n": 1,
+  "source": "fallback",
+  "vapid": true,
+  "checked_at": "2026-09-22T12:53:47+07:00"
+ },
+ "welcome": {
+  "at": "2026-09-22T12:53:47+07:00",
+  "sent": 1,
+  "gone": 0,
+  "failed": 0,
+  "errors": []
+ },
+ "known_subs": [
+  "ba278538ba0a3ae0"
+ ]
 }
