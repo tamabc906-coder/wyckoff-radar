@@ -71,6 +71,18 @@ data/     history.json                        40 mã × ~2.700 nến từ 2015-1
 docs/     PWA + docs/data/{latest,bars,state,settings,watchlist}.json + daily/
 ```
 
+## Cách dùng để mua/bán (theo số đã đo, không theo sách)
+
+1. **Chỉ tin chuông SC.** +3,0 %/10p trung bình, đúng 62 %, ~2 tín hiệu/tháng. 4/10 lệnh lỗ → stop bắt buộc.
+2. **Đọc thẻ**: KL/TB20 2–3× tốt nhất (≥ 3× mua nửa cỡ); đóng cửa < 20 % → chờ nến xanh AR; stop = đáy SC − 0,5×ATR.
+3. **Mua** ATO/15 phút đầu phiên sau; rủi ro ≤ 1 % vốn: số CP = (1 % vốn) ÷ (giá − stop); ≤ 1/3 vị thế; ≤ 3 mã SC cùng lúc.
+4. **Thoát** (cái nào đến trước): đóng cửa dưới stop → bán phiên sau; hết 10 phiên → bán hoặc giữ theo vùng nếu đã có
+   AR/ST; SOW (nếu bật) → bán. Lãi 5–8 % ở AR → bán 1/3.
+5. **Giữ theo vùng** (tab Bảng/Biểu đồ): ST KL thấp = tốt; đóng dưới đáy SC 3 % hai phiên = vùng thất bại → thoát;
+   C/D chỉ giữ, không thêm vì Spring/SOS (đo ≈ mua-đại); E → stop nâng dần theo đáy nhịp lùi.
+6. **Không bán vì BC/UT/UTAD** (đo ra giá còn tăng). Spring #2 trên mã đang giữ = cảnh báo rò rỉ, siết stop.
+7. **Kiểm chứng** ở tab Lịch sử: TB +10p của SC phải > +0,57 % sau ~30 phiên; âm 3 tháng liền → đo lại, không nới ngưỡng.
+
 ## Đang chạy thật
 
 Site: https://tamabc906-coder.github.io/wyckoff-radar/ · Actions: workflow `daily` 15:45 VN T2–T6 (+ 3 dự phòng) ·
