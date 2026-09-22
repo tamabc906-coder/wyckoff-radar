@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-22T17:54:53+07:00",
+ "generated_at": "2026-09-22T21:58:27+07:00",
  "trade_date": "2026-09-22",
  "watchlist": {
   "n": 39,
@@ -166,7 +166,7 @@
    "caution": ""
   }
  },
- "stats_generated_at": "2026-09-22T17:47:55+07:00",
+ "stats_generated_at": "2026-09-22T21:57:20+07:00",
  "signals": [
   {
    "symbol": "EIB",
@@ -190,7 +190,7 @@
    "stats": {
     "mean10": 0.00199,
     "n": 42,
-    "base10": 0.005719682448400423
+    "base10": 0.005709488096553333
    },
    "push": false,
    "tr": {
@@ -765,9 +765,9 @@
    "caution": "",
    "grade": null,
    "stats": {
-    "mean10": -0.00215,
-    "n": 851,
-    "base10": 0.005719682448400423
+    "mean10": -0.00219,
+    "n": 852,
+    "base10": 0.005709488096553333
    },
    "push": false,
    "tr": {
@@ -1318,9 +1318,9 @@
    "caution": "",
    "grade": null,
    "stats": {
-    "mean10": -0.00215,
-    "n": 851,
-    "base10": 0.005719682448400423
+    "mean10": -0.00219,
+    "n": 852,
+    "base10": 0.005709488096553333
    },
    "push": false,
    "tr": {
@@ -1924,8 +1924,8 @@
    "tr_age": 26,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "sow",
-   "last_event_date": "2026-07-20",
+   "last_event": "st",
+   "last_event_date": "2026-02-10",
    "rs_20": -13.0
   },
   {
@@ -2053,12 +2053,12 @@
    "company_name": "Công Ty TNHH Vận Tải Và Công Nghiệp Hàng Hải Gemadept Holding",
    "price": 77.4,
    "change_pct": 0.52,
-   "phase": "E",
-   "tr_lo": 57.43,
-   "tr_hi": 62.87,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "range",
-   "tr_kind": "acc",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "lps",
    "last_event_date": "2026-02-12",
    "rs_20": -4.1
@@ -2083,12 +2083,12 @@
    "company_name": "Công ty Cổ phần Chứng khoán Thành phố Hồ Chí Minh",
    "price": 25.0,
    "change_pct": 0.0,
-   "phase": "E↓",
-   "tr_lo": 19.2,
-   "tr_hi": 23.31,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "bc",
-   "tr_kind": "dist",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "ar",
    "last_event_date": "2026-01-26",
    "rs_20": -4.9
@@ -2128,12 +2128,12 @@
    "company_name": "Ngân hàng Thương mại cổ phần Lộc Phát Việt Nam ",
    "price": 46.3,
    "change_pct": 0.43,
-   "phase": "E",
-   "tr_lo": 38.98,
-   "tr_hi": 41.44,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "sc",
-   "tr_kind": "acc",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "sos",
    "last_event_date": "2026-04-06",
    "rs_20": -11.6
@@ -2143,12 +2143,12 @@
    "company_name": "Ngân hàng Thương mại Cổ phần Quân đội ",
    "price": 20.1,
    "change_pct": -0.5,
-   "phase": "E",
-   "tr_lo": 18.43,
-   "tr_hi": 20.58,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "range",
-   "tr_kind": "acc",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "bu",
    "last_event_date": "2026-01-28",
    "rs_20": -5.5
@@ -2278,12 +2278,12 @@
    "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
    "price": 76.7,
    "change_pct": 0.0,
-   "phase": "E",
-   "tr_lo": 47.4,
-   "tr_hi": 54.8,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "range",
-   "tr_kind": "acc",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "st",
    "last_event_date": "2025-12-08",
    "rs_20": -1.7
@@ -2308,12 +2308,12 @@
    "company_name": "Ngân hàng Thương mại Cổ phần Kỹ Thương Việt Nam - Techcombank",
    "price": 32.3,
    "change_pct": 0.16,
-   "phase": "E",
-   "tr_lo": 28.65,
-   "tr_hi": 30.7,
+   "phase": "-",
+   "tr_lo": null,
+   "tr_hi": null,
    "tr_age": null,
-   "tr_origin": "sc",
-   "tr_kind": "acc",
+   "tr_origin": null,
+   "tr_kind": null,
    "last_event": "bc",
    "last_event_date": "2026-08-26",
    "rs_20": -0.5
@@ -2446,8 +2446,8 @@
   "watch": 3,
   "acc": 22,
   "dist": 1,
-  "markup": 10,
-  "none": 6
+  "markup": 5,
+  "none": 11
  },
  "push": {
   "skipped": true

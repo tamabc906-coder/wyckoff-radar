@@ -36,6 +36,10 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
 - **Giai đoạn D giữ vùng** tới khi có LPS/LPSY hoặc 20 phiên sau SOS/SOW — nếu đóng vùng theo quy tắc 2 phiên thì
   không bao giờ thấy LPS (8 → 17 lần).
 - SC dưới vùng đang có → ưu tiên SC (mở chu kỳ mới), không ghi SOW cùng nến. ST tối đa 3 lần/vùng, chỉ ở GĐ A/B.
+- **markup/markdown hết hiệu lực sau 60 phiên** hoặc khi giá đi ngược hẳn qua biên vùng cũ (sửa 22/09/2026: HCM mang
+  nhãn "đang giảm" suốt 8 tháng dù giá +27 %). Hệ quả: SOW còn 49 lệnh (bỏ cú phá "đáy LPS" của vùng đã chết) nhưng
+  vẫn −3,43 %/10p, t −2,5, 5/5 năm. Mã đi ngang/tăng đều không có sự kiện nào là **đúng bản chất Wyckoff**, không
+  phải thiếu dữ liệu — 22/09 có 7/39 mã như vậy (sụt sâu nhất chỉ −11 → −16 %, chưa chạm ngưỡng SC).
 - Soi: `venv\Scripts\python -m scripts.inspect HPG --from 2022-09-15 --to 2023-03-31`, `--count` để xem tần suất.
 
 ## Kết quả đo G2 (`reports/measure-2026-09-21.md`, 39 mã, 2016→2026, +10 phiên, mua-đại +0,57 %)

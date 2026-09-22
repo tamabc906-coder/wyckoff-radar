@@ -46,6 +46,10 @@ CFG = {
     # LPS / BU
     # LPS: đáy nhịp lùi không sâu quá 35 % biên độ vùng tính từ creek (Wyckoff: LPS có thể nằm trong vùng)
     "lps_min": 2, "lps_max": 20, "lps_depth": 0.35, "lps_vol": 0.8, "bu_band": 0.02,
+    # markup/markdown hết hiệu lực sau ngần này phiên, hoặc khi giá đi ngược hẳn qua biên vùng cũ: mốc "đáy LPS"
+    # của một vùng đã kết thúc 8 tháng trước không còn là mốc Wyckoff hợp lệ (HCM 22/09/2026 mang nhãn "đang giảm"
+    # suốt 8 tháng dù giá tăng 27 %).
+    "markup_max": 60,
     # UT
     "ut_vol": 1.5, "ut_close_pos": 0.3, "utad_break": 0.05,
     # nhãn
@@ -446,6 +450,10 @@ def _close_tr(R: Result, tr: TR, i: int, reason: str) -> None:
 def _no_tr(R: Result, i: int, atr, av, vr, floor, cfg) -> None:
     """Không có vùng: SOW phá đáy LPS khi đang markup; SC/BC mở vùng mới (chờ AR); vùng gốc range."""
     bars, b = R.bars, R.bars[i]
+    m = R.markup
+    if m and (i - m.start > cfg["markup_max"]
+              or (m.down and b["c"] > m.tr.hi) or (not m.down and b["c"] < m.tr.lo)):
+        R.markup = None                       # quá hạn, hoặc giá đã đi ngược hẳn qua biên vùng cũ
     if _climax(bars, i, atr, av, cfg, "acc"):
         # SC đi trước SOW-phá-LPS: cùng một nến không thể vừa "thoát" vừa "cao trào bán"
         R.markup = None
