@@ -163,6 +163,15 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bot
 .tg::after { content: ''; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: var(--card); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
 .tg.on { background: var(--up); } .tg.on::after { left: 23px; }
 .erow.off .n, .erow.off .s { opacity: .6; }
+/* mục 07 hướng dẫn */
+.guide h4 { margin: 8px 0 0; font-size: 13px; font-weight: 700; color: var(--brand); }
+.guide p, .guide li { font-size: 12px; line-height: 1.5; color: var(--text); margin: 0; }
+.guide p { margin-top: 4px; }
+.guide ul { margin: 4px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.guide table { border-collapse: collapse; width: 100%; margin-top: 4px; font-size: 11px; }
+.guide th, .guide td { border: 1px solid var(--line2); padding: 5px 6px; text-align: left; vertical-align: top; line-height: 1.35; }
+.guide th { background: var(--tile); color: var(--mute); font-weight: 600; }
+.guide td:first-child { font-weight: 700; white-space: nowrap; }
 .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; font-size: 11.5px; }
 .grid2 div { background: var(--tile); border-radius: 8px; padding: 7px 9px; display: flex; justify-content: space-between; gap: 6px; }
 .grid2 span { color: var(--mute); }

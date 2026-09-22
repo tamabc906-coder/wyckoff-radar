@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=Source+Serif+4:ital,wght@0,600;1,400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -123,6 +123,61 @@
       <div class="num">06</div><h2>Trạng thái</h2>
       <div class="state" id="stateFoot">—</div>
     </section>
+    <section class="sec guide">
+      <div class="num">07</div><h2>Hướng dẫn sử dụng để mua/bán</h2>
+      <div class="more">Viết theo số đã đo trên 39 mã, 2016 → 2026 — không theo sách. Chi tiết đầy đủ trong README của repo.</div>
+
+      <h4>1. App đang đưa cho bạn cái gì</h4>
+      <ul>
+        <li>Chuông <b>MUA</b> duy nhất: <b>SC — bán tháo cao trào</b>. Mua mở phiên sau, giữ 10 phiên → <b>+3,0 % trung bình, đúng 62 %</b>, thắng mua-đại 7/10 năm, ~2 tín hiệu/tháng cả danh mục.</li>
+        <li>Nghĩa là cứ 10 lệnh có ~4 lệnh lỗ. Lợi thế nằm ở <i>trung bình nhiều lệnh</i>, không ở từng lệnh. Không đặt stop thì một lệnh "SC hụt" (HPG 31/10/2022 báo SC rồi sập thêm 22 %) ăn hết lãi cả tháng.</li>
+        <li>Chuông <b>THOÁT</b>: <b>SOW</b> (−3,4 %/10p, 5/5 năm — gần đạt) và <b>Spring #2</b> (−2,7 %/10p, thua mua-đại 8/10 năm — sách gọi là bẫy mua, số đo VN nói ngược). Cả hai đo lại sau 3 tháng.</li>
+        <li>Mọi sự kiện khác (Spring #3, Test, LPS, SOS, BC, UT…) chỉ là <b>nhãn để hiểu bối cảnh</b> — số đo cho thấy không hơn mua đại, đừng mua/bán vì thấy nhãn.</li>
+      </ul>
+
+      <h4>2. Quy trình mỗi ngày (5 phút)</h4>
+      <p><b>15:45</b> — có chuông → mở thẻ ở tab Hôm nay, đọc theo thứ tự:</p>
+      <table>
+        <tr><th>Ô trên thẻ</th><th>Đọc thế nào</th><th>Quyết định</th></tr>
+        <tr><td>KL / TB20</td><td>2–3× là vùng tốt nhất (8/9 năm); ≥ 3× yếu hơn</td><td>≥ 3× → mua nửa cỡ lệnh</td></tr>
+        <tr><td>Đóng cửa %</td><td>0 % = đóng sát sàn, mai có thể sàn tiếp</td><td>&lt; 20 % → chờ phiên sau có nến xanh (AR) rồi mới mua</td></tr>
+        <tr><td>Vùng</td><td>"Chưa có vùng" là bình thường với SC</td><td>—</td></tr>
+        <tr><td>Stop</td><td>đáy nến SC − 0,5×ATR, thường −3 → −5 %</td><td><b>bắt buộc</b>, tính số cổ phiếu từ đây</td></tr>
+        <tr><td>Đã đo</td><td>★ đạt · ◐ gần đạt · đo kém</td><td>chỉ tin ★; ◐ và "đo kém" là nhắc nhở</td></tr>
+        <tr><td>Lưu ý T+2</td><td>ngày bán sớm nhất</td><td>không thoát được trước ngày này</td></tr>
+      </table>
+      <p><b>Sáng hôm sau</b> — đặt lệnh mua ATO hoặc 15 phút đầu phiên (phép đo dùng giá mở cửa). Cỡ lệnh: rủi ro ≤ 1 % tài khoản → số CP = (1 % × vốn) ÷ (giá − stop). Ví dụ vốn 500 tr, giá 21,1, stop 20,2 → lỗ tối đa 5 tr → 5 tr ÷ 0,9 ≈ 5.500 CP. Tối đa 1/3 vị thế dự định; không giữ quá 3 mã SC cùng lúc (chúng thường xuất hiện cùng ngày khi cả thị trường sập).</p>
+      <p><b>Từ T+2</b> — ba lối thoát, lấy cái đến trước: (1) đóng cửa dưới <b>stop</b> → bán ngay phiên sau; (2) hết <b>10 phiên</b> → bán, hoặc chuyển sang giữ theo vùng nếu đã có AR/ST; (3) chuông <b>SOW</b> hoặc <b>Spring #2</b> trên mã đó → bán.</p>
+
+      <h4>3. Sau khi mua: dùng tab Bảng và Biểu đồ để giữ hay thoát</h4>
+      <ul>
+        <li><b>AR</b> (3–8 phiên sau SC): giá bật ≥ 5 % → vùng có biên trên (creek). Lãi nhanh 5–8 % ở AR → bán 1/3, vì ST thường kéo về đáy SC.</li>
+        <li><b>ST</b>: về gần đáy SC với KL thấp hơn → tốt, giữ. ST mà KL cao hơn SC → xấu.</li>
+        <li><b>Vùng thất bại</b>: đóng dưới đáy SC 3 % hai phiên liền (Bảng chuyển mã sang "không nền") → stop đã chạm, thoát.</li>
+        <li>Giai đoạn <b>C/D</b> (hàng xanh trong Bảng): sách kỳ vọng breakout, số đo nói mua theo Spring/SOS không hơn mua đại → chỉ <b>giữ</b> phần đã mua từ SC, không thêm.</li>
+        <li><b>E</b> (tăng giá): đã rời vùng. Chỉ còn SOW phá đáy LPS làm tín hiệu thoát; ngoài ra tự nâng stop theo đáy nhịp lùi gần nhất − 0,5×ATR.</li>
+      </ul>
+
+      <h4>4. Tín hiệu thoát</h4>
+      <ul>
+        <li><b>SOW</b>: đang giữ → bán phiên sau; không giữ → không bắt đáy ít nhất 10 phiên. Mạnh nhất ở hai dạng: vùng tích lũy phá đáy có KL (−4,6 %) và phá đáy LPS khi đang tăng (−4,2 %).</li>
+        <li><b>Spring #2</b> (thủng đáy vùng 1–3 % rồi đóng lại, KL vừa): đang giữ → thoát hoặc siết stop sát đáy vừa thủng; chưa giữ → không mua. Chỉ thành spring thật nếu 2–10 phiên sau có Test KL &lt; ½ KL spring.</li>
+        <li><b>BC / UT / UTAD</b>: không bán vì chúng — đo ra giá còn tăng tiếp (+2,6 %). Chỉ coi là "không mua đuổi".</li>
+      </ul>
+
+      <h4>5. Chọn mã để canh trước (tab Bảng)</h4>
+      <ul>
+        <li>Bộ lọc <b>Tích lũy</b>: mã đang xây nền — chỉ SC/SOW/Spring #2 mới mua/bán, còn lại quan sát.</li>
+        <li><b>RS20 &gt; 0</b> (mạnh hơn VN-Index): số đo chưa chứng minh lọc này giúp, nhưng khi phải chọn giữa 3 SC cùng ngày, ưu tiên mã RS cao hơn và KL 2–3×.</li>
+        <li>Chạm một dòng → Biểu đồ: creek/ice, huy hiệu sự kiện, cột KL đỏ (≥ 1,5×) / xanh (≤ 0,7×) để tự đối chiếu nỗ lực–kết quả.</li>
+      </ul>
+
+      <h4>6. Kiểm chứng (tab Lịch sử)</h4>
+      <p>Mỗi tín hiệu được chấm +5p/+10p bằng giá thật, có phí. Sau ~30 phiên xem "TB +10p" của các lệnh SC có còn &gt; +0,57 % không, và SOW/Spring #2 có còn âm không. Nếu 3 tháng liên tiếp sai chiều → đo lại, đừng tự nới ngưỡng.</p>
+
+      <h4>7. App KHÔNG làm gì</h4>
+      <p>Không lọc thị trường chung, không đọc tin, không biết cổ tức/ETF cơ cấu (KL giả ngày ETF), không chạy trong phiên. Chuông lúc 15:45 là nến đã chốt — không có chuyện "báo sớm bắt đáy trong phiên".</p>
+    </section>
   </section>
 </main>
 
@@ -137,6 +192,6 @@
 <div class="toast" id="toast"><b id="toastTitle"></b><span id="toastBody"></span></div>
 
 <script src="config.js?v=1"></script>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

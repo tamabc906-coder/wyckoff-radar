@@ -17,7 +17,7 @@ DOCS = ROOT / "docs"
 OUT = ROOT / "reports" / "shots"
 CHROME = next((p for p in (r"C:\Program Files\Google\Chrome\Application\chrome.exe",
                            r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe") if Path(p).exists()), None)
-TABS = {"today": 1500, "board": 1400, "chart": 1100, "history": 1400, "settings": 1500}
+TABS = {"today": 1500, "board": 1400, "chart": 1100, "history": 1400, "settings": 3400}
 
 
 class Quiet(SimpleHTTPRequestHandler):
