@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5A3E2B">
+  <title>Wyckoff Radar</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=Source+Serif+4:ital,wght@0,600;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-today" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"></path></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M3 12h18M3 19h18"></path></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l4-6 3 3 5-7"></path></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.5-2.4 1a7 7 0 0 0-1.7-1L14.5 3h-5l-.3 2.9a7 7 0 0 0-1.7 1l-2.4-1-2 3.5 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.5 2.4-1a7 7 0 0 0 1.7 1l.3 2.9h5l.3-2.9a7 7 0 0 0 1.7-1l2.4 1 2-3.5-2-1.5c.1-.3.1-.7.1-1z"></path></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="#5A3E2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></symbol>
+    <!-- Logo: chữ W vàng cát trên nền nâu đất, 4 cột khối lượng — khớp docs/icons/logo.svg -->
+    <symbol id="logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="#5A3E2B"></rect><polyline points="20,30 37,80 60,45 83,80 100,30" fill="none" stroke="#D9B36A" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"></polyline><rect x="24" y="92" width="12" height="10" rx="2" fill="#D9B36A"></rect><rect x="44" y="86" width="12" height="16" rx="2" fill="#D9B36A"></rect><rect x="64" y="95" width="12" height="7" rx="2" fill="#D9B36A"></rect><rect x="84" y="82" width="12" height="20" rx="2" fill="#D9B36A"></rect></symbol>
+  </defs>
+</svg>
+
+<main id="main">
+  <!-- ============ HÔM NAY ============ -->
+  <section class="panel on" id="p-today" role="tabpanel" aria-label="Hôm nay">
+    <header class="top">
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <div class="t"><div class="title">Wyckoff Radar</div><div class="sub" id="todaySub">Đang tải…</div></div>
+      <div class="pill" id="pushPill"><span class="dot"></span><span>Push</span></div>
+    </header>
+    <div class="strip" id="strip"></div>
+    <div id="todayBody" class="cards"></div>
+    <div class="banner" id="banner">
+      <b>Đo 11 năm rồi mới bật</b>
+      <span id="bannerText">39 mã, 2016 → 2026, so với mua đại rồi giữ 10 phiên (+0,57 %): chỉ <b>SC — bán tháo cao trào</b> đạt ★ (+3,02 %/10p, thắng 7/10 năm). Spring/Test/LPS/BU ≈ mua-đại; SOS thua "Trần + KL + phá đỉnh"; SOW là tín hiệu thoát duy nhất có giá trị (−3,4 %/10p, 5/5 năm) nhưng thiếu 1 năm dữ liệu so tiêu chí nên tắt sẵn. Mọi sự kiện khác vẫn gắn nhãn trên Bảng và Biểu đồ.</span>
+    </div>
+  </section>
+
+  <!-- ============ BẢNG ============ -->
+  <section class="panel" id="p-board" role="tabpanel" aria-label="Bảng giai đoạn">
+    <header class="top">
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <div class="t"><div class="title">Bảng giai đoạn</div><div class="sub" id="boardSub">39 mã</div></div>
+    </header>
+    <div class="chips" id="boardChips"></div>
+    <div class="leg">
+      <span><b>A</b> dừng giảm</span><span><b>B</b> xây nền</span><span class="g"><b>C</b> spring/test</span><span class="g"><b>D</b> SOS/LPS</span><span class="g"><b>E</b> tăng giá</span><span class="r"><b>PP</b> phân phối</span><span><b>—</b> không nền</span>
+    </div>
+    <div class="table" id="boardBody"></div>
+    <div class="foot">RS20 = giá mã / VN-Index trong 20 phiên. "Không nền" = chưa có vùng đi ngang (sau SC/BC hoặc sau đợt giảm ≥ 10 %), app không xét tín hiệu mua. Chạm một dòng để mở biểu đồ.</div>
+  </section>
+
+  <!-- ============ BIỂU ĐỒ ============ -->
+  <section class="panel" id="p-chart" role="tabpanel" aria-label="Biểu đồ">
+    <header class="top">
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <div class="t"><div class="title">Biểu đồ</div><div class="sub" id="chartSub">Nến ngày · biên vùng · nhãn sự kiện</div></div>
+    </header>
+    <div class="ctrl">
+      <label for="c-sym" class="lab">Mã</label><select id="c-sym" aria-label="Chọn mã"></select>
+      <div class="seg" id="c-range"><button type="button" data-n="60" aria-pressed="true">60</button><button type="button" data-n="120">120</button></div>
+      <div class="cpx" id="cpx"></div>
+    </div>
+    <div class="chartbox"><canvas id="cvs"></canvas><div class="tip" id="tip"></div><div class="range"><span id="r-lab">Đang tải nến…</span><input id="r-off" type="range" min="0" max="0" value="0" aria-label="Cuộn thời gian"></div></div>
+    <div class="leg small">
+      <span><i style="background:#D9B36A;opacity:.5"></i> vùng tích lũy (creek / ice)</span><span><i style="background:#C98B8B;opacity:.6"></i> vùng phân phối</span><span><i style="background:#B84A3A"></i> cột KL đỏ ≥ 1,5× TB20</span><span><i style="background:#2E7D4F"></i> cột KL xanh ≤ 0,7×</span>
+    </div>
+    <div class="tl" id="timeline"></div>
+    <div class="foot">Nến từ <span class="mono">data/bars.json</span> (120 phiên/mã, job ghi mỗi ngày). Nhãn và biên vùng do job tính trên trọn lịch sử — đúng thứ máy đã thấy vào ngày đó, không vẽ lại từ tương lai.</div>
+  </section>
+
+  <!-- ============ LỊCH SỬ ============ -->
+  <section class="panel" id="p-history" role="tabpanel" aria-label="Lịch sử">
+    <header class="top">
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <div class="t"><div class="title">Lịch sử</div><div class="sub" id="histSub">30 phiên gần nhất</div></div>
+    </header>
+    <div class="totals" id="totals"></div>
+    <div class="days" id="days"></div>
+    <div class="foot">Lợi suất tính từ giá mở cửa phiên sau tín hiệu, bán đóng cửa, có phí 0,15 %/chiều + thuế 0,1 %. "—" = chưa đủ phiên. Tín hiệu THOÁT chấm ngược: giá giảm sau đó = đúng. Dòng "tái lập" là 30 phiên dựng lại từ kho khi app ra đời; từ 22/09/2026 là thứ máy thật sự báo.</div>
+  </section>
+
+  <!-- ============ CÀI ĐẶT ============ -->
+  <section class="panel" id="p-settings" role="tabpanel" aria-label="Cài đặt">
+    <header class="top">
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <div class="t"><div class="title">Cài đặt</div><div class="sub">thông báo · sự kiện · ngưỡng</div></div>
+    </header>
+    <section class="sec">
+      <div class="num">01</div><h2>Thông báo trên điện thoại</h2>
+      <div class="state" id="pushState">Đang kiểm tra…</div>
+      <div class="btns"><button type="button" class="btn primary" id="pushBtn">Bật thông báo</button><button type="button" class="btn" id="testBtn" hidden>Thử</button></div>
+      <div id="subCodeWrap"></div>
+      <div class="more">Job chạy 15:45 T2–T6 trên GitHub Actions (dự phòng 16:15 / 16:55 / 18:20 nếu nguồn chốt muộn). Mỗi tín hiệu một thông báo riêng, không gộp. Không máy chủ — điện thoại nhận qua Web Push.</div>
+    </section>
+    <section class="sec">
+      <div class="num">02</div><h2>Sự kiện MUA</h2>
+      <div class="more" id="buyNote">Số đo 39 mã, 2016 → 2026, so với "mua đại rồi giữ 10 phiên". ★ = hơn mua-đại, |t| ≥ 2, thắng ≥ 70 % số năm — bật sẵn. "Đo kém" tắt sẵn; bật thì thẻ mang dòng cảnh báo.</div>
+      <div class="rows" id="buyRows"></div>
+    </section>
+    <section class="sec">
+      <div class="num">03</div><h2>Sự kiện THOÁT</h2>
+      <div class="more">VN không bán khống — đây là nhắc thoát / không mua đuổi. Đạt khi giá 10 phiên sau âm ở ≥ 70 % số năm.</div>
+      <div class="rows" id="exitRows"></div>
+    </section>
+    <section class="sec">
+      <div class="num">04</div><h2>Sự kiện theo dõi (không push)</h2>
+      <div class="rows" id="watchRows"></div>
+    </section>
+    <section class="sec">
+      <div class="num">05</div><h2>Ngưỡng (chỉ đọc)</h2>
+      <div class="grid2" id="thresholds"></div>
+      <div class="more">Đổi trong <span class="mono">job/wyckoff.py</span> CFG rồi đo lại (<span class="mono">scripts/measure.py</span>) trước khi bật. Công tắc đọc từ <span class="mono">docs/data/settings.json</span> (<span class="mono">events_disabled</span>) — đổi trên máy tính rồi đẩy lên GitHub.</div>
+    </section>
+    <section class="sec">
+      <div class="num">06</div><h2>Trạng thái</h2>
+      <div class="state" id="stateFoot">—</div>
+    </section>
+  </section>
+</main>
+
+<nav role="tablist" aria-label="Điều hướng">
+  <button role="tab" aria-selected="true" data-tab="today"><svg aria-hidden="true"><use href="#i-today"/></svg><span>Hôm nay</span></button>
+  <button role="tab" aria-selected="false" data-tab="board"><svg aria-hidden="true"><use href="#i-board"/></svg><span>Bảng</span></button>
+  <button role="tab" aria-selected="false" data-tab="chart"><svg aria-hidden="true"><use href="#i-chart"/></svg><span>Biểu đồ</span></button>
+  <button role="tab" aria-selected="false" data-tab="history"><svg aria-hidden="true"><use href="#i-history"/></svg><span>Lịch sử</span></button>
+  <button role="tab" aria-selected="false" data-tab="settings"><svg aria-hidden="true"><use href="#i-settings"/></svg><span>Cài đặt</span></button>
+</nav>
+
+<div class="toast" id="toast"><b id="toastTitle"></b><span id="toastBody"></span></div>
+
+<script src="config.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

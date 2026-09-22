@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T23:19:20+07:00",
+ "generated_at": "2026-09-22T12:00:22+07:00",
  "trade_date": "2026-09-21",
  "watchlist": {
   "n": 39,
@@ -1365,7 +1365,7 @@
      "direction": "watch",
      "price": 16.4,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1376,7 +1376,7 @@
      "direction": "watch",
      "price": 33.3,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1387,7 +1387,7 @@
      "direction": "watch",
      "price": 14.4,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     }
@@ -1404,7 +1404,7 @@
      "direction": "watch",
      "price": 33.3,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1415,7 +1415,7 @@
      "direction": "watch",
      "price": 10.9,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     }
@@ -1432,7 +1432,7 @@
      "direction": "watch",
      "price": 11.5,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1443,7 +1443,7 @@
      "direction": "watch",
      "price": 14.0,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     }
@@ -1460,7 +1460,7 @@
      "direction": "watch",
      "price": 11.8,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1471,7 +1471,7 @@
      "direction": "watch",
      "price": 16.6,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     }
@@ -1499,7 +1499,7 @@
      "direction": "watch",
      "price": 20.9,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1510,7 +1510,7 @@
      "direction": "watch",
      "price": 26.5,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     },
@@ -1521,7 +1521,7 @@
      "direction": "watch",
      "price": 32.6,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": null,
      "r10": null
     }
@@ -1538,7 +1538,7 @@
      "direction": "watch",
      "price": 29.95,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 2.92,
      "r10": null
     },
@@ -1549,7 +1549,7 @@
      "direction": "watch",
      "price": 26.5,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": -1.35,
      "r10": null
     }
@@ -1566,7 +1566,7 @@
      "direction": "watch",
      "price": 32.25,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 2.84,
      "r10": null
     }
@@ -1588,7 +1588,7 @@
      "direction": "watch",
      "price": 15.1,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": -8.26,
      "r10": null
     }
@@ -1605,7 +1605,7 @@
      "direction": "watch",
      "price": 16.9,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": -5.11,
      "r10": null
     }
@@ -1622,7 +1622,7 @@
      "direction": "watch",
      "price": 27.1,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": -2.42,
      "r10": -4.27
     }
@@ -1707,7 +1707,7 @@
      "direction": "watch",
      "price": 17.0,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 2.25,
      "r10": -0.4
     }
@@ -1735,7 +1735,7 @@
      "direction": "watch",
      "price": 30.55,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 0.58,
      "r10": 6.12
     },
@@ -1746,7 +1746,7 @@
      "direction": "watch",
      "price": 21.2,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 2.66,
      "r10": 2.19
     },
@@ -1757,7 +1757,7 @@
      "direction": "watch",
      "price": 27.05,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 2.01,
      "r10": 0.53
     },
@@ -1768,7 +1768,7 @@
      "direction": "watch",
      "price": 28.75,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 10.99,
      "r10": 13.02
     }
@@ -1827,7 +1827,7 @@
      "direction": "watch",
      "price": 30.85,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": -1.53,
      "r10": 1.38
     },
@@ -1838,7 +1838,7 @@
      "direction": "watch",
      "price": 17.22,
      "push": false,
-     "grade": "đo kém",
+     "grade": null,
      "r5": 5.84,
      "r10": 6.92
     }

@@ -268,7 +268,8 @@ def run(force: bool = False, dry_run: bool = False, no_push: bool = False) -> in
     if daily_file.exists() and not force:
         log.info("Đã có %s — không chạy lại (dùng --force nếu muốn)", daily_file.name)
         return 0
-    if unsettled and not force:
+    if unsettled:
+        # --force KHÔNG vượt được bước này: nến giữa phiên ghi vào kho sẽ thành tín hiệu giả (bẫy DNSE 14/09/2026)
         msg = (f"Nguồn chưa chốt phiên {trade_iso}: {len(unsettled)}/{len(bars)} mã chưa có nến ATC "
                f"({', '.join(unsettled[:8])}{'…' if len(unsettled) > 8 else ''}) — chờ cron sau")
         log.warning(msg)
