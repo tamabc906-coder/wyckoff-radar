@@ -29,7 +29,8 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bot
 
 /* dải 4 ô */
 .strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 12px 16px 4px; }
-.strip div { border-radius: 10px; padding: 8px 6px; text-align: center; background: var(--gold-soft); }
+.strip button { border: 0; border-radius: 10px; padding: 8px 6px; text-align: center; background: var(--gold-soft); min-height: 52px; cursor: pointer; font-family: inherit; }
+.strip button:active { filter: brightness(0.96); }
 .strip .n { font-size: 20px; font-weight: 700; color: var(--brand); }
 .strip .k { font-size: 10px; color: var(--brand); }
 .strip .buy { background: var(--up-soft); } .strip .buy .n { color: var(--up); } .strip .buy .k { color: var(--up-ink); }

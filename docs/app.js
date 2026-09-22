@@ -94,14 +94,14 @@
   function renderToday() {
     const sm = D.summary || {}, late = D.source && D.source.late;
     $("todaySub").textContent = `Phiên ${dmy(D.trade_date)} · ${late ? "chốt muộn" : "đã chốt ATC"} · ${D.generated_at ? D.generated_at.slice(11, 16) : ""}`;
-    $("strip").innerHTML = `<div class="buy"><div class="n">${sm.buy || 0}</div><div class="k">MUA</div></div><div class="exit"><div class="n">${sm.exit || 0}</div><div class="k">THOÁT</div></div><div><div class="n">${sm.acc || 0}</div><div class="k">Tích lũy</div></div><div><div class="n">${sm.dist || 0}</div><div class="k">Phân phối</div></div>`;
+    $("strip").innerHTML = `<button type="button" class="buy" data-go="buy"><div class="n">${sm.buy || 0}</div><div class="k">MUA</div></button><button type="button" class="exit" data-go="exit"><div class="n">${sm.exit || 0}</div><div class="k">THOÁT</div></button><button type="button" data-go="acc"><div class="n">${sm.acc || 0}</div><div class="k">Tích lũy</div></button><button type="button" data-go="dist"><div class="n">${sm.dist || 0}</div><div class="k">Phân phối</div></button>`;
     const sig = D.signals || [];
     let html = "", k = 0;
     const groups = [["buy", "Tín hiệu mua"], ["exit", "Tín hiệu thoát"], ["watch", "Theo dõi — không push, chỉ để hiểu vùng"]];
     for (const [dir, label] of groups) {
       const xs = sig.filter((s) => s.direction === dir);
       if (!xs.length) continue;
-      html += `<div class="seclabel">${label} · ${xs.length}</div>` + xs.map((s) => card(s, ++k)).join("");
+      html += `<div class="seclabel" data-dir="${dir}">${label} · ${xs.length}</div>` + xs.map((s) => card(s, ++k)).join("");
     }
     if (!sig.length) html = `<div class="empty"><b>Không có sự kiện Wyckoff hôm nay</b>${sm.acc || 0} mã đang trong vùng tích lũy, ${sm.dist || 0} phân phối. Bảng cho biết mã nào ở giai đoạn C/D — nơi tín hiệu hay xuất hiện.</div>`;
     else if (!sig.some((s) => s.push)) html = `<div class="empty"><b>Không có tín hiệu đủ ★ hôm nay</b>Bên dưới là sự kiện theo dõi — máy không rung chuông vì chúng chưa đo đạt.</div>` + html;
@@ -135,6 +135,17 @@
     $("boardBody").innerHTML = h;
   }
   $("boardChips").addEventListener("click", (ev) => { const b = ev.target.closest("button"); if (!b) return; boardFilter = b.dataset.f; renderBoard(); });
+
+  // Dải 4 ô ở tab Hôm nay: MUA/THOÁT cuộn tới nhóm thẻ, Tích lũy/Phân phối mở tab Bảng với bộ lọc sẵn
+  document.addEventListener("click", (ev) => {
+    const g = ev.target.closest("[data-go]"); if (!g) return;
+    const k = g.dataset.go;
+    if (k === "acc" || k === "dist") { boardFilter = k; switchTab("board"); renderBoard(); return; }
+    const el = document.querySelector(`#todayBody .seclabel[data-dir="${k}"]`);
+    if (el) { switchTab("today"); el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    else toast(k === "buy" ? "Hôm nay không có tín hiệu MUA" : "Hôm nay không có tín hiệu THOÁT",
+               "Tab Bảng cho biết mã nào đang ở giai đoạn C/D — nơi tín hiệu hay xuất hiện.");
+  });
 
   // ---------------------------------------------------------------- Lịch sử
   function renderHistory() {
