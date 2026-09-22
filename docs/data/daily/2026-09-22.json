@@ -1,0 +1,35 @@
+{
+ "trade_date": "2026-09-22",
+ "generated_at": "2026-09-22T15:54:19+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "EIB",
+   "event": "spring1",
+   "name": "Spring #1 / Shakeout",
+   "direction": "watch",
+   "price": 16.45,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "CEO",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 11.7,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "MBS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 16.7,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
