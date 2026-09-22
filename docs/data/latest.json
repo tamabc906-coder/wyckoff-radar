@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-22T15:54:19+07:00",
+ "generated_at": "2026-09-22T17:54:53+07:00",
  "trade_date": "2026-09-22",
  "watchlist": {
   "n": 39,
@@ -21,7 +21,6 @@
    "bu",
    "bc",
    "utad",
-   "sow",
    "lpsy"
   ],
   "buy_only": false,
@@ -63,12 +62,12 @@
    "caution": "Stop dưới đáy spring − 0,5×ATR."
   },
   "spring2": {
-   "name": "Spring #2",
-   "direction": "watch",
-   "priority": 50,
-   "hint": "Phá đáy 1–3 % rồi đóng lại trong vùng — cần Test KL thấp xác nhận.",
-   "advice": "Chờ Test trong 2–10 phiên.",
-   "caution": ""
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "priority": 14,
+   "hint": "Thủng đáy vùng 1–3 % rồi đóng lại bên trong với KL vừa — sách gọi là spring, số đo VN nói 10 phiên sau thường thấp hơn.",
+   "advice": "Đang giữ → thoát hoặc siết stop sát đáy vừa thủng; chưa giữ → không mua. Chỉ thành spring thật nếu 2–10 phiên sau có Test KL < ½.",
+   "caution": "Phát hiện sau khi đo — đo lại sau 3 tháng."
   },
   "spring1": {
    "name": "Spring #1 / Shakeout",
@@ -140,7 +139,7 @@
    "priority": 10,
    "hint": "Nến giảm rộng, KL lớn, phá đáy vùng phân phối hoặc đáy LPS đang tăng.",
    "advice": "Thoát toàn bộ.",
-   "caution": ""
+   "caution": "5/5 năm đúng chiều nhưng chưa đủ 6 năm mẫu — đo lại sau 3 tháng."
   },
   "lpsy": {
    "name": "Điểm cung cuối (LPSY)",
@@ -167,7 +166,7 @@
    "caution": ""
   }
  },
- "stats_generated_at": "2026-09-21T23:09:19+07:00",
+ "stats_generated_at": "2026-09-22T17:47:55+07:00",
  "signals": [
   {
    "symbol": "EIB",
@@ -191,7 +190,7 @@
    "stats": {
     "mean10": 0.00199,
     "n": 42,
-    "base10": 0.005722726162278463
+    "base10": 0.005719682448400423
    },
    "push": false,
    "tr": {
@@ -768,7 +767,7 @@
    "stats": {
     "mean10": -0.00215,
     "n": 851,
-    "base10": 0.005722726162278463
+    "base10": 0.005719682448400423
    },
    "push": false,
    "tr": {
@@ -1321,7 +1320,7 @@
    "stats": {
     "mean10": -0.00215,
     "n": 851,
-    "base10": 0.005722726162278463
+    "base10": 0.005719682448400423
    },
    "push": false,
    "tr": {
@@ -2451,13 +2450,7 @@
   "none": 6
  },
  "push": {
-  "source": "fallback",
-  "n_devices": 1,
-  "sent": 0,
-  "gone": 0,
-  "failed": 0,
-  "errors": [],
-  "n_signals": 0
+  "skipped": true
  },
  "history": [
   {
@@ -2560,22 +2553,22 @@
    "late": false,
    "signals": [
     {
+     "symbol": "VDS",
+     "event": "spring2",
+     "name": "Spring #2 — rò rỉ đáy vùng",
+     "direction": "exit",
+     "price": 10.9,
+     "push": true,
+     "grade": "★",
+     "r5": null,
+     "r10": null
+    },
+    {
      "symbol": "PVS",
      "event": "ut",
      "name": "Upthrust (UT)",
      "direction": "watch",
      "price": 33.3,
-     "push": false,
-     "grade": null,
-     "r5": null,
-     "r10": null
-    },
-    {
-     "symbol": "VDS",
-     "event": "spring2",
-     "name": "Spring #2",
-     "direction": "watch",
-     "price": 10.9,
      "push": false,
      "grade": null,
      "r5": null,
@@ -2649,9 +2642,20 @@
      "name": "Dấu hiệu suy yếu (SOW)",
      "direction": "exit",
      "price": 16.0,
-     "push": false,
-     "grade": "đo kém",
+     "push": true,
+     "grade": "gần đạt",
      "r5": 2.08,
+     "r10": null
+    },
+    {
+     "symbol": "KBC",
+     "event": "spring2",
+     "name": "Spring #2 — rò rỉ đáy vùng",
+     "direction": "exit",
+     "price": 26.5,
+     "push": true,
+     "grade": "★",
+     "r5": -0.78,
      "r10": null
     },
     {
@@ -2663,17 +2667,6 @@
      "push": false,
      "grade": null,
      "r5": 0.31,
-     "r10": null
-    },
-    {
-     "symbol": "KBC",
-     "event": "spring2",
-     "name": "Spring #2",
-     "direction": "watch",
-     "price": 26.5,
-     "push": false,
-     "grade": null,
-     "r5": -0.78,
      "r10": null
     },
     {
