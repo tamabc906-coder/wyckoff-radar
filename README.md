@@ -24,7 +24,7 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
 | G2 | `scripts/measure.py` — đo 11 năm → `reports/measure-2026-09-21.md`, `docs/data/stats.json`; chốt `events_disabled` | ✅ 21/09/2026 |
 | G3 | `job/run_daily.py`, `scripts/replay.py` (30 phiên lịch sử), `latest.json`/`bars.json`/`daily/` | ✅ 21/09/2026 |
 | G4 | `docs/` 5 tab theo thiết kế (Hôm nay · Bảng · Biểu đồ · Lịch sử · Cài đặt); `scripts/shot.py` chụp headless → `reports/shots/` | ✅ 22/09/2026 |
-| G5 | Lên GitHub `tamabc906-coder/wyckoff-radar`, Pages, Secrets, chạy thật | |
+| G5 | Lên GitHub `tamabc906-coder/wyckoff-radar`, Pages `/docs`, 4 Secrets; điện thoại nhận "Đã kết nối" | ✅ 22/09/2026 — chạy thật từ phiên 22/09, cron 15:45 |
 
 ## Lõi Wyckoff (`job/wyckoff.py`) — điều đã chỉnh so với kế hoạch khi soi dữ liệu thật (21/09/2026)
 
@@ -71,7 +71,14 @@ data/     history.json                        40 mã × ~2.700 nến từ 2015-1
 docs/     PWA + docs/data/{latest,bars,state,settings,watchlist}.json + daily/
 ```
 
-## Đưa lên GitHub (G5)
+## Đang chạy thật
+
+Site: https://tamabc906-coder.github.io/wyckoff-radar/ · Actions: workflow `daily` 15:45 VN T2–T6 (+ 3 dự phòng) ·
+Push: 1 máy Android qua Secret `PUSH_SUBS_FALLBACK`. Kiểm tra: GitHub API `actions/runs` + `data/state.json` trên
+Pages (`last_trade_date` phải tăng mỗi phiên). Sửa giao diện → tăng `?v=` trong `index.html`, bảo điện thoại đóng
+hẳn app. Bot commit `docs/data` mỗi ngày → luôn `git pull --ff-only origin main` trước khi push `master:main`.
+
+## Đưa lên GitHub (G5) — đã làm
 
 Repo public `tamabc906-coder/wyckoff-radar` → mời `deptlink2025-bctc` làm collaborator (máy này nhớ tài khoản
 đó) → Settings → Pages: branch `main`, thư mục `/docs` → Secrets: `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`,
