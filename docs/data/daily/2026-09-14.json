@@ -1,6 +1,6 @@
 {
  "trade_date": "2026-09-14",
- "generated_at": "2026-09-22T12:00:20+07:00",
+ "generated_at": "2026-09-22T17:51:02+07:00",
  "late": false,
  "replay": true,
  "signals": [
@@ -10,8 +10,17 @@
    "name": "Dấu hiệu suy yếu (SOW)",
    "direction": "exit",
    "price": 16.0,
-   "push": false,
-   "grade": "đo kém"
+   "push": true,
+   "grade": "gần đạt"
+  },
+  {
+   "symbol": "KBC",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 26.5,
+   "push": true,
+   "grade": "★"
   },
   {
    "symbol": "HPG",
@@ -19,15 +28,6 @@
    "name": "Kiểm tra thứ cấp (ST)",
    "direction": "watch",
    "price": 20.9,
-   "push": false,
-   "grade": null
-  },
-  {
-   "symbol": "KBC",
-   "event": "spring2",
-   "name": "Spring #2",
-   "direction": "watch",
-   "price": 26.5,
    "push": false,
    "grade": null
   },

@@ -16,8 +16,9 @@ from common.config import HTTP_TIMEOUT, SITE_DATA, WORKER_TOKEN, WORKER_URL
 logger = logging.getLogger(__name__)
 
 DEFAULTS = {
-    # id sự kiện không push (xem job/wyckoff.py EVENTS). Chốt theo reports/measure-2026-09-21.md: chỉ `sc` đạt ★.
-    "events_disabled": ["spring3", "test", "sos", "lps", "bu", "bc", "utad", "sow", "lpsy"],
+    # id sự kiện không push (xem job/wyckoff.py EVENTS). Theo reports/measure-2026-09-22.md: bật `sc` (★ mua),
+    # `spring2` (★ thoát, phát hiện sau khi đo) và `sow` (◐ gần đạt) — người dùng chốt 22/09/2026, đo lại sau 3 tháng.
+    "events_disabled": ["spring3", "test", "sos", "lps", "bu", "bc", "utad", "lpsy"],
     "buy_only": False,         # True = không push sự kiện THOÁT dù có bật
     "history_days": 30,        # số phiên hiện ở tab Lịch sử
     "heartbeat": False,        # nhịp tim thứ Hai

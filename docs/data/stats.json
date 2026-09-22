@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-09-21T23:09:19+07:00",
+ "generated_at": "2026-09-22T17:47:55+07:00",
  "from_year": 2016,
  "n_symbols": 39,
  "base": {
-  "5": 0.0009848669607219042,
-  "10": 0.005722726162278463,
-  "20": 0.015663239541330507
+  "5": 0.0009833743129778864,
+  "10": 0.005719682448400423,
+  "20": 0.01565713988050394
  },
  "events": {
   "sc": {
@@ -22,6 +22,7 @@
    "years_won": 7,
    "years_total": 10,
    "star": true,
+   "near": false,
    "by_year": {
     "2016": [
      17,
@@ -83,6 +84,7 @@
    "years_won": 0,
    "years_total": 0,
    "star": false,
+   "near": false,
    "by_year": {
     "2017": [
      2,
@@ -128,6 +130,7 @@
    "years_won": 1,
    "years_total": 5,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      8,
@@ -189,6 +192,7 @@
    "years_won": 5,
    "years_total": 11,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      5,
@@ -250,6 +254,7 @@
    "years_won": 0,
    "years_total": 0,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      1,
@@ -307,6 +312,7 @@
    "years_won": 1,
    "years_total": 1,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      2,
@@ -368,6 +374,7 @@
    "years_won": 7,
    "years_total": 11,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      23,
@@ -429,6 +436,7 @@
    "years_won": 2,
    "years_total": 11,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      73,
@@ -476,67 +484,6 @@
     ]
    }
   },
-  "spring2": {
-   "direction": "watch",
-   "n": 151,
-   "per_month": 1.17,
-   "mean": {
-    "5": -0.0201,
-    "10": -0.02664,
-    "20": -0.02298
-   },
-   "win10": 0.358,
-   "t10": -4.38,
-   "years_won": 2,
-   "years_total": 10,
-   "star": false,
-   "by_year": {
-    "2016": [
-     12,
-     -0.02093
-    ],
-    "2017": [
-     12,
-     -0.00052
-    ],
-    "2018": [
-     17,
-     -0.00199
-    ],
-    "2019": [
-     24,
-     -0.00479
-    ],
-    "2020": [
-     9,
-     -0.0347
-    ],
-    "2021": [
-     9,
-     -0.05882
-    ],
-    "2022": [
-     12,
-     -0.10012
-    ],
-    "2023": [
-     2,
-     -0.04056
-    ],
-    "2024": [
-     15,
-     -0.02675
-    ],
-    "2025": [
-     11,
-     0.01148
-    ],
-    "2026": [
-     28,
-     -0.04345
-    ]
-   }
-  },
   "spring1": {
    "direction": "watch",
    "n": 42,
@@ -551,6 +498,7 @@
    "years_won": 3,
    "years_total": 5,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      6,
@@ -612,6 +560,7 @@
    "years_won": 8,
    "years_total": 11,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      6,
@@ -659,6 +608,68 @@
     ]
    }
   },
+  "spring2": {
+   "direction": "exit",
+   "n": 151,
+   "per_month": 1.17,
+   "mean": {
+    "5": -0.0201,
+    "10": -0.02664,
+    "20": -0.02298
+   },
+   "win10": 0.358,
+   "t10": -4.38,
+   "years_won": 8,
+   "years_total": 10,
+   "star": true,
+   "near": false,
+   "by_year": {
+    "2016": [
+     12,
+     -0.02093
+    ],
+    "2017": [
+     12,
+     -0.00052
+    ],
+    "2018": [
+     17,
+     -0.00199
+    ],
+    "2019": [
+     24,
+     -0.00479
+    ],
+    "2020": [
+     9,
+     -0.0347
+    ],
+    "2021": [
+     9,
+     -0.05882
+    ],
+    "2022": [
+     12,
+     -0.10012
+    ],
+    "2023": [
+     2,
+     -0.04056
+    ],
+    "2024": [
+     15,
+     -0.02675
+    ],
+    "2025": [
+     11,
+     0.01148
+    ],
+    "2026": [
+     28,
+     -0.04345
+    ]
+   }
+  },
   "bc": {
    "direction": "exit",
    "n": 622,
@@ -673,6 +684,7 @@
    "years_won": 2,
    "years_total": 11,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      28,
@@ -734,6 +746,7 @@
    "years_won": 4,
    "years_total": 7,
    "star": false,
+   "near": false,
    "by_year": {
     "2016": [
      3,
@@ -791,6 +804,7 @@
    "years_won": 5,
    "years_total": 5,
    "star": false,
+   "near": true,
    "by_year": {
     "2016": [
      2,
@@ -852,6 +866,7 @@
    "years_won": 0,
    "years_total": 0,
    "star": false,
+   "near": false,
    "by_year": {
     "2017": [
      2,
@@ -877,6 +892,7 @@
   }
  },
  "starred": [
-  "sc"
+  "sc",
+  "spring2"
  ]
 }

@@ -45,10 +45,13 @@ Thiết kế giao diện: https://claude.ai/artifact/Kv3gudduQb4R8YR1Jk8A63
 | **SC** bán tháo cao trào | 244 | **+3,02 %** | 4,2 | 7/10 | ★ duy nhất — vững cả khi bỏ 2022 (+3,67 %) |
 | Spring #3 / Test / LPS / BU | 10 / 55 / 16 / 30 | ≈ 0 … +2 % | < 1,3 | — | không hơn mua-đại; phá đáy vùng < 1 % rồi đóng lại là **rò rỉ** (−2,6 %, 0/8 năm) |
 | SOS (vượt creek có KL) | 97 | −0,20 % | −0,2 | 5/11 | thua đối chứng "Trần+KL+phá đỉnh" (+1,69 %); nền ≥ 20 phiên không giúp |
-| **SOW** phá đáy có KL | 73 | **−3,39 %** | −3,3 | 5/5 | thoát duy nhất có giá trị; thiếu 1 năm so tiêu chí ★ — bật tay nếu muốn |
+| **SOW** phá đáy có KL | 73 | **−3,39 %** | −3,3 | 5/5 | ◐ gần đạt (thiếu năm mẫu) — **bật 22/09/2026**, đo lại sau 3 tháng |
+| **Spring #2** thủng đáy vùng 1–3 % rồi đóng lại | 151 | **−2,66 %** | −4,4 | 8/10 thua mua-đại | ★ theo tiêu chí THOÁT nhưng phát hiện sau khi đo — sách gọi là bẫy mua, VN nói ngược; **bật 22/09/2026** làm cảnh báo thoát |
 | BC / UTAD / LPSY | 622 / 70 / 6 | +2,6 / +0,7 / +9 % | — | — | mẫu đỉnh là tiếp diễn tăng, không dùng |
 
-Mặc định push: chỉ `sc`. Mọi sự kiện khác vẫn gắn nhãn trên Bảng/Biểu đồ. Tách nhóm: `scripts/split.py`.
+Push hiện tại: `sc` (mua), `sow` + `spring2` (thoát). Mọi sự kiện khác vẫn gắn nhãn trên Bảng/Biểu đồ. Tách nhóm:
+`scripts/split.py`. Báo cáo mới nhất: `reports/measure-2026-09-22.md` (thêm hạng ◐ gần đạt = đúng hướng, |t| ≥ 2,
+≥ 70 % năm nhưng chỉ 4–5 năm đủ lệnh).
 
 ## Chạy trên máy
 
@@ -77,10 +80,11 @@ docs/     PWA + docs/data/{latest,bars,state,settings,watchlist}.json + daily/
 2. **Đọc thẻ**: KL/TB20 2–3× tốt nhất (≥ 3× mua nửa cỡ); đóng cửa < 20 % → chờ nến xanh AR; stop = đáy SC − 0,5×ATR.
 3. **Mua** ATO/15 phút đầu phiên sau; rủi ro ≤ 1 % vốn: số CP = (1 % vốn) ÷ (giá − stop); ≤ 1/3 vị thế; ≤ 3 mã SC cùng lúc.
 4. **Thoát** (cái nào đến trước): đóng cửa dưới stop → bán phiên sau; hết 10 phiên → bán hoặc giữ theo vùng nếu đã có
-   AR/ST; SOW (nếu bật) → bán. Lãi 5–8 % ở AR → bán 1/3.
+   AR/ST; chuông **SOW** → bán; chuông **Spring #2** trên mã đang giữ → thoát hoặc siết stop sát đáy vừa thủng
+   (chưa giữ → không mua; chỉ thành spring thật nếu 2–10 phiên sau có Test KL < ½). Lãi 5–8 % ở AR → bán 1/3.
 5. **Giữ theo vùng** (tab Bảng/Biểu đồ): ST KL thấp = tốt; đóng dưới đáy SC 3 % hai phiên = vùng thất bại → thoát;
    C/D chỉ giữ, không thêm vì Spring/SOS (đo ≈ mua-đại); E → stop nâng dần theo đáy nhịp lùi.
-6. **Không bán vì BC/UT/UTAD** (đo ra giá còn tăng). Spring #2 trên mã đang giữ = cảnh báo rò rỉ, siết stop.
+6. **Không bán vì BC/UT/UTAD** (đo ra giá còn tăng). SOW và Spring #2 là hai cảnh báo thoát có số đo; đo lại sau 3 tháng.
 7. **Kiểm chứng** ở tab Lịch sử: TB +10p của SC phải > +0,57 % sau ~30 phiên; âm 3 tháng liền → đo lại, không nới ngưỡng.
 
 ## Đang chạy thật

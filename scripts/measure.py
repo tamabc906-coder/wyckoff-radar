@@ -213,17 +213,20 @@ def main() -> int:
             s5, s10, s20 = (stats([x for _, x in r[h]]) for h in HS)
             won, tot = years_beat(r[10], base_year[10], years, side)
             good = (s10["mean"] > base_all[10]["mean"]) if side == "buy" else (s10["mean"] < base_all[10]["mean"])
-            star = tot >= 6 and won / tot >= 0.7 and good and abs(s10["t"]) >= 2
+            strong = good and abs(s10["t"]) >= 2 and tot > 0 and won / tot >= 0.7
+            star = strong and tot >= 6
+            near = strong and 4 <= tot < 6            # "gần đạt": đúng hướng, đủ t, đủ tỷ lệ năm nhưng thiếu năm mẫu
             by_year = {Y: stats([x for y, x in r[10] if y == Y]) for Y in years}
             yr = " ".join(f"{str(Y)[2:]}:{by_year[Y]['mean'] * 100:+.1f}({by_year[Y]['n']})" for Y in years if by_year[Y]["n"])
-            P(f"| {'★ ' if star else ''}{name} (`{k}`) | {s10['n']:,} | {s10['n'] / n_months:.1f} | {s5['mean'] * 100:+.2f} % | "
+            P(f"| {'★ ' if star else ('◐ ' if near else '')}{name} (`{k}`) | {s10['n']:,} | {s10['n'] / n_months:.1f} | {s5['mean'] * 100:+.2f} % | "
               f"**{s10['mean'] * 100:+.2f} %** | {s10['win'] * 100:.0f} % | {s10['t']:.1f} | {s20['mean'] * 100:+.2f} % | {won}/{tot} | {yr} |")
             if k in W.EVENTS:
                 stats_json["events"][k] = {
                     "direction": W.EVENTS[k]["direction"], "n": s10["n"], "per_month": round(s10["n"] / n_months, 2),
                     "mean": {str(h): round(s["mean"], 5) for h, s in zip(HS, (s5, s10, s20))},
                     "win10": round(s10["win"], 3), "t10": round(s10["t"], 2), "years_won": won, "years_total": tot,
-                    "star": bool(star), "by_year": {str(Y): [by_year[Y]["n"], round(by_year[Y]["mean"], 5)] for Y in years if by_year[Y]["n"]},
+                    "star": bool(star), "near": bool(near),
+                    "by_year": {str(Y): [by_year[Y]["n"], round(by_year[Y]["mean"], 5)] for Y in years if by_year[Y]["n"]},
                 }
                 if star:
                     starred.append(k)
@@ -242,7 +245,7 @@ def main() -> int:
     P("- So `sc` với `ctrl_sc_lab`, `sos` với `ctrl_ceiling`, `spring3`/`test` với `ctrl_spring_hv`: Wyckoff chỉ đáng thêm "
       "nếu hơn đối chứng đã có, hoặc cho tín hiệu ở thời điểm khác (sớm hơn/ít hơn).")
     P("- `lps` so `sos`: chờ nhịp lùi có lợi hơn mua ngay không.")
-    P("- Sự kiện n nhỏ (< 30) hoặc ít năm đủ lệnh: chưa kết luận được, để ở chế độ nhãn.")
+    P("- Sự kiện n nhỏ (< 30) hoặc ít năm đủ lệnh: chưa kết luận được, để ở chế độ nhãn. ◐ = gần đạt (đủ hướng/t/tỷ lệ năm, chỉ 4–5 năm mẫu).")
     P(f"- ★ đạt: {', '.join(starred) if starred else 'không có'} → `docs/data/settings.json` `events_disabled` = mọi sự kiện MUA/THOÁT còn lại.")
     text = "\n".join(out)
     print(text)

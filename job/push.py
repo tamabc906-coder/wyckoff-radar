@@ -120,8 +120,10 @@ def signal_payload(sig: dict, trade_date: str) -> dict:
         bits.append(f"stop {sig['stop']:.2f}")
     if sig.get("grade") == "★":
         bits.append("★ đã đo đạt")
+    elif sig.get("grade") == "gần đạt":
+        bits.append("◐ gần đạt — thiếu năm mẫu")
     elif sig.get("grade"):
-        bits.append(f"đo kém — bật tay")
+        bits.append("đo kém — bật tay")
     return {
         "kind": "wyckoff", "title": f"{arrow} {sig['symbol']} · {head} · {sig['name']} · phiên {_dm(trade_date)}",
         "body": " · ".join(bits), "symbol": sig["symbol"], "url": "./#today",

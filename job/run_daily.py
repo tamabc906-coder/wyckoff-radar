@@ -94,7 +94,7 @@ def _grade(stats: dict, eid: str) -> tuple[str | None, dict | None]:
     m = {"mean10": ev["mean"]["10"], "mean5": ev["mean"]["5"], "mean20": ev["mean"]["20"], "n": ev["n"],
          "win10": ev["win10"], "years_won": ev["years_won"], "years_total": ev["years_total"],
          "base10": (stats.get("base") or {}).get("10")}
-    return ("★" if ev.get("star") else "đo kém"), m
+    return ("★" if ev.get("star") else "gần đạt" if ev.get("near") else "đo kém"), m
 
 
 def _t2(d: date) -> date:

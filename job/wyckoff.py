@@ -66,8 +66,13 @@ EVENTS = {
     "spring3": {"name": "Spring #3 (KL thấp)", "direction": "buy", "priority": 1,
                 "hint": "Phá đáy vùng < 1 % rồi đóng lại bên trong, KL ≤ 0,7× TB — cung đã cạn.",
                 "advice": "Mua mở phiên mai, tối đa 1/3 vị thế; thêm khi có LPS.", "caution": "Stop dưới đáy spring − 0,5×ATR."},
-    "spring2": {"name": "Spring #2", "direction": "watch", "priority": 50,
-                "hint": "Phá đáy 1–3 % rồi đóng lại trong vùng — cần Test KL thấp xác nhận.", "advice": "Chờ Test trong 2–10 phiên.", "caution": ""},
+    # Đo 2016→2026 (reports/measure-2026-09-22.md): −2,66 %/10p, t −4,4, thua mua-đại 8/10 năm — ở VN cú thủng đáy vùng
+    # 1–3 % rồi đóng lại là RÒ RỈ, không phải bẫy mua như sách. Người dùng chốt 22/09/2026: dùng làm cảnh báo THOÁT.
+    # Phát hiện sau khi đo (không phải giả thuyết đặt trước) → đo lại sau 3 tháng bằng tab Lịch sử.
+    "spring2": {"name": "Spring #2 — rò rỉ đáy vùng", "direction": "exit", "priority": 14,
+                "hint": "Thủng đáy vùng 1–3 % rồi đóng lại bên trong với KL vừa — sách gọi là spring, số đo VN nói 10 phiên sau thường thấp hơn.",
+                "advice": "Đang giữ → thoát hoặc siết stop sát đáy vừa thủng; chưa giữ → không mua. Chỉ thành spring thật nếu 2–10 phiên sau có Test KL < ½.",
+                "caution": "Phát hiện sau khi đo — đo lại sau 3 tháng."},
     "spring1": {"name": "Spring #1 / Shakeout", "direction": "watch", "priority": 51,
                 "hint": "Phá đáy 3–6 % với KL lớn — rũ bỏ, cung còn; bắt buộc có Test.", "advice": "Chờ Test.", "caution": "Không mua ngay."},
     "test":    {"name": "Test sau Spring", "direction": "buy", "priority": 2,
@@ -89,7 +94,8 @@ EVENTS = {
     "utad":    {"name": "Upthrust sau phân phối (UTAD)", "direction": "exit", "priority": 11,
                 "hint": "Phá đỉnh vùng phân phối rồi đóng lại bên trong — kiểm tra cuối trước khi giảm.", "advice": "Thoát / không mua thêm.", "caution": ""},
     "sow":     {"name": "Dấu hiệu suy yếu (SOW)", "direction": "exit", "priority": 10,
-                "hint": "Nến giảm rộng, KL lớn, phá đáy vùng phân phối hoặc đáy LPS đang tăng.", "advice": "Thoát toàn bộ.", "caution": ""},
+                "hint": "Nến giảm rộng, KL lớn, phá đáy vùng phân phối hoặc đáy LPS đang tăng.", "advice": "Thoát toàn bộ.",
+                "caution": "5/5 năm đúng chiều nhưng chưa đủ 6 năm mẫu — đo lại sau 3 tháng."},
     "lpsy":    {"name": "Điểm cung cuối (LPSY)", "direction": "exit", "priority": 13,
                 "hint": "Hồi phục yếu sau SOW, KL thấp, không vượt lại đáy vùng cũ.", "advice": "Không mua lại.", "caution": ""},
     "er_absorb": {"name": "Nỗ lực không kết quả", "direction": "label", "priority": 95,

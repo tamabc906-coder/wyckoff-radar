@@ -46,6 +46,22 @@ def test_build_signal_sc_pushed_and_watch_ungraded():
     assert s3["push"] is True
 
 
+def test_spring2_is_exit_and_pushed_when_enabled():
+    from tests.test_wyckoff import accumulation_rows as rows_fn
+    bars = _bars(rows_fn(spring=("spring2",)))
+    R = W.analyze(bars)
+    e = next(x for x in R.events if x["id"] == "spring2")
+    assert W.EVENTS["spring2"]["direction"] == "exit"
+    stats = {"base": {"10": 0.0057}, "events": {"spring2": {"direction": "exit", "n": 151, "mean": {"5": -0.02, "10": -0.0266, "20": -0.023},
+                                                             "win10": 0.36, "t10": -4.4, "years_won": 8, "years_total": 10, "star": True},
+                                                 "sow": {"direction": "exit", "n": 73, "mean": {"5": -0.022, "10": -0.0339, "20": -0.022},
+                                                         "win10": 0.32, "t10": -3.3, "years_won": 5, "years_total": 5, "star": False, "near": True}}}
+    s = J.build_signal("HPG", META, bars, R, e, stats, {"events_disabled": ["lps"], "buy_only": False})
+    assert s["direction"] == "exit" and s["push"] is True and s["grade"] == "★"
+    assert J.build_signal("HPG", META, bars, R, e, stats, {"events_disabled": [], "buy_only": True})["push"] is False
+    assert J._grade(stats, "sow")[0] == "gần đạt"
+
+
 def test_board_and_chart_payload():
     bars, R = _run()
     idx = [{"d": b["d"], "c": 1000.0 + k} for k, b in enumerate(bars)]

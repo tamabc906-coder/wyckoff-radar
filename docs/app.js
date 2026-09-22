@@ -51,7 +51,7 @@
   // ---------------------------------------------------------------- Hôm nay
   function statLine(s) {
     if (!s.stats) return "";
-    const m = s.stats, tag = s.grade === "★" ? `<span class="tag star">★ ${pct(m.mean10 * 100, 1)}/10p</span>` : s.grade ? `<span class="tag poor">Đo kém ${pct(m.mean10 * 100, 1)}/10p</span>` : `<span class="tag">Sau sự kiện ${pct(m.mean10 * 100, 1)}/10p</span>`;
+    const m = s.stats, tag = s.grade === "★" ? `<span class="tag star">★ ${pct(m.mean10 * 100, 1)}/10p</span>` : s.grade === "gần đạt" ? `<span class="tag near">◐ gần đạt ${pct(m.mean10 * 100, 1)}/10p</span>` : s.grade ? `<span class="tag poor">Đo kém ${pct(m.mean10 * 100, 1)}/10p</span>` : `<span class="tag">Sau sự kiện ${pct(m.mean10 * 100, 1)}/10p</span>`;
     const yrs = m.years_total != null ? ` · ${m.years_won}/${m.years_total} năm` : "";
     return `${tag}${yrs} · ${m.n} lệnh · mua-đại ${pct(m.base10 * 100, 2)}`;
   }
@@ -76,7 +76,9 @@
       s.stats ? ["Đã đo", statLine(s)] : null,
       dir === "buy" ? ["Lưu ý", `T+2: bán sớm nhất ${dmy(s.t2_date)}.${s.caution ? " " + esc(s.caution) : ""}`] : s.caution ? ["Lưu ý", esc(s.caution)] : null,
     ].filter(Boolean);
-    const warn = s.grade === "đo kém" && s.push ? `<div class="warnbox">Sự kiện này không đạt ★ khi đo 11 năm — hiện vì bạn bật thủ công trong Cài đặt. Coi là nhắc nhở, không phải lệnh.</div>` : "";
+    const warn = s.grade === "đo kém" && s.push ? `<div class="warnbox">Sự kiện này không đạt ★ khi đo 11 năm — hiện vì bạn bật thủ công trong Cài đặt. Coi là nhắc nhở, không phải lệnh.</div>`
+      : s.grade === "gần đạt" ? `<div class="warnbox soft">Đúng hướng 5/5 năm nhưng chưa đủ 6 năm mẫu theo tiêu chí — đo lại sau 3 tháng bằng tab Lịch sử.</div>`
+      : s.event === "spring2" ? `<div class="warnbox soft">Đạt tiêu chí thoát (thua mua-đại 8/10 năm) nhưng là phát hiện sau khi đo — sách gọi đây là bẫy mua, số đo VN nói ngược. Đo lại sau 3 tháng.</div>` : "";
     const trLine = tr ? { lo: tr.lo, hi: tr.hi } : null;
     return `<article class="card ${kind}">
       <div class="hd"><span class="no">${idx}</span><h3>${esc(s.symbol)} <small>· ${esc(s.company_name).replace(/^Công ty Cổ phần /i, "")}</small></h3><span class="chip ${kind}">${DIR_VN[dir]} · ${esc(s.name).replace(/\s*\(.*\)$/, "")}</span></div>
@@ -156,7 +158,7 @@
     const st = STATS && STATS.events && STATS.events[id];
     let s = "chưa đo";
     if (st) s = `${pct(st.mean["10"] * 100, 2)}/10p · đúng ${Math.round(st.win10 * 100)} % · ${st.years_total ? st.years_won + "/" + st.years_total + " năm · " : ""}${st.n} lệnh · ${String(st.per_month).replace(".", ",")}/th`;
-    const tag = meta.direction === "watch" ? "" : st && st.star ? `<span class="tag star">★ đạt</span>` : st ? `<span class="tag poor">đo kém</span>` : "";
+    const tag = meta.direction === "watch" ? "" : st && st.star ? `<span class="tag star">★ đạt</span>` : st && st.near ? `<span class="tag near">◐ gần đạt</span>` : st ? `<span class="tag poor">đo kém</span>` : "";
     const canToggle = meta.direction !== "watch";
     return `<div class="erow ${on ? "" : "off"}"><div class="t"><div class="n">${esc(meta.name)} ${tag}</div><div class="s">${s}</div></div>${canToggle ? `<button type="button" class="tg ${on ? "on" : ""}" role="switch" aria-checked="${on}" aria-label="${esc(meta.name)}" data-ev="${id}"></button>` : "<span></span>"}</div>`;
   }
