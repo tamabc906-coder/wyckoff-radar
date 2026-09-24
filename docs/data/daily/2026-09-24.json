@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-09-24",
+ "generated_at": "2026-09-24T15:55:02+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "EIB",
+   "event": "test",
+   "name": "Test sau Spring",
+   "direction": "buy",
+   "price": 16.5,
+   "push": false,
+   "grade": "đo kém"
+  }
+ ],
+ "stale": []
+}
