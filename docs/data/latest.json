@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T15:55:02+07:00",
+ "generated_at": "2026-09-24T22:49:39+07:00",
  "trade_date": "2026-09-24",
  "watchlist": {
   "n": 39,
@@ -942,8 +942,8 @@
    "price": 82.0,
    "change_pct": -3.3,
    "phase": "E",
-   "tr_lo": 64.4,
-   "tr_hi": 79.8,
+   "tr_lo": 62.58,
+   "tr_hi": 77.55,
    "tr_age": null,
    "tr_origin": "range",
    "tr_kind": "acc",
@@ -1331,15 +1331,15 @@
    "company_name": "Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng",
    "price": 22.1,
    "change_pct": 0.18,
-   "phase": "-",
-   "tr_lo": null,
-   "tr_hi": null,
+   "phase": "E",
+   "tr_lo": 18.63,
+   "tr_hi": 21.32,
    "tr_age": null,
-   "tr_origin": null,
-   "tr_kind": null,
-   "last_event": "sc",
-   "last_event_date": "2026-09-18",
-   "rs_20": -15.5
+   "tr_origin": "range",
+   "tr_kind": "acc",
+   "last_event": "test",
+   "last_event_date": "2026-02-13",
+   "rs_20": 6.5
   }
  ],
  "stale": [],
@@ -1349,17 +1349,11 @@
   "watch": 0,
   "acc": 22,
   "dist": 1,
-  "markup": 4,
-  "none": 12
+  "markup": 5,
+  "none": 11
  },
  "push": {
-  "source": "fallback",
-  "n_devices": 1,
-  "sent": 0,
-  "gone": 0,
-  "failed": 0,
-  "errors": [],
-  "n_signals": 0
+  "skipped": true
  },
  "history": [
   {

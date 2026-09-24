@@ -30,7 +30,10 @@ STATE = SITE_DATA / "state.json"
 STATS = SITE_DATA / "stats.json"
 DAILY = SITE_DATA / "daily"
 
-FETCH_DAYS = 30            # lịch sử nằm trong kho; mỗi ngày chỉ lấy đoạn gần nhất để nối
+# Lịch sử nằm trong kho; mỗi ngày lấy lại ~400 ngày gần nhất rồi nối. Không lấy 30 như trước: DNSE hạ giá
+# lịch sử sau GDKHQ có khi muộn cả tháng (VPB 26/08/2026), đoạn ngắn không còn chứa phiên nào trước ngày GDKHQ
+# để nhận ra điều chỉnh — xem store.adjusted_symbols.
+FETCH_DAYS = 400
 BARS_IN_CHART = 120        # nến mỗi mã cho tab Biểu đồ (~220 KB bars.json, bot commit mỗi ngày)
 CANDLES_IN_CARD = 60       # nến trong thẻ tín hiệu
 LIQUID_MIN_BARS = 30
@@ -281,7 +284,20 @@ def run(force: bool = False, dry_run: bool = False, no_push: bool = False) -> in
     if (now.date() - trade_date).days > 4:
         log.warning("Phiên gần nhất %s cách hôm nay quá 4 ngày — DNSE có thể chưa cập nhật", trade_iso)
 
+    # Nguồn đã điều chỉnh giá quá khứ (GDKHQ) → nối không đủ, phần cũ hơn đoạn vừa tải vẫn là hệ giá cũ.
+    # Tải lại trọn lịch sử mã đó rồi mới nối đoạn mới (đoạn mới có nến hôm nay đã gộp nến 1 phút).
+    adjusted = store_mod.adjusted_symbols(hist, bars)
+    if adjusted:
+        with dnse.DnseClient(days=store_mod.FULL_DAYS) as c:
+            for sym, day, ratio in adjusted:
+                full = c.daily(sym, days=store_mod.FULL_DAYS)
+                if full:
+                    store_mod.replace(hist, sym, full)
+                    log.warning("Nguồn điều chỉnh giá %s (phiên %s × %.4f) — đã tải lại %d nến", sym, day, ratio, len(full))
+        st["adjusted"] = {"trade_date": trade_iso, "symbols": [a[0] for a in adjusted]}
+
     changed = sum(store_mod.merge(hist, sym, b) for sym, b in bars.items()) + store_mod.merge(hist, INDEX_SYMBOL, idx_bars)
+    changed += len(adjusted)     # tải lại trọn lịch sử cũng là đổi kho — không cộng thì kho không được ghi
     log.info("Kho: nối %d nến mới/đổi", changed)
 
     signals, board, stale, chart = scan(hist, items, trade_date, cfg, stats)
