@@ -1,0 +1,35 @@
+{
+ "trade_date": "2026-09-25",
+ "generated_at": "2026-09-25T15:54:53+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "DPR",
+   "event": "ut",
+   "name": "Upthrust (UT)",
+   "direction": "watch",
+   "price": 37.9,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "AGR",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 12.45,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "CTG",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 30.15,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
