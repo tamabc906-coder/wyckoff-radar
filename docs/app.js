@@ -123,7 +123,7 @@
     for (const r of xs) {
       const g = r.phase === "C" || r.phase === "D" || r.phase === "E", rr = r.phase === "PP" || r.phase === "E↓", none = r.phase === "-";
       const ev = r.last_event ? (D.events[r.last_event] || {}) : null;
-      const evName = ev ? esc(ev.name).replace(/\s*\(.*\)$/, "") : "Không nền";
+      const evName = ev ? esc(ev.name).replace(/\s*\(.*\)$/, "") : r.tr_lo != null ? "Vùng này chưa có sự kiện" : "Không nền";
       const evCls = ev ? (ev.direction === "buy" ? "g" : ev.direction === "exit" ? "r" : "d") : "d";
       const sub = r.tr_age != null ? `${r.tr_kind === "dist" ? "phân phối" : "tích lũy"} ${r.tr_age} phiên${r.tr_origin === "range" ? " · nền" : " · SC"}` : r.phase === "E" ? "đã rời vùng, đang tăng" : r.phase === "E↓" ? "đã rời vùng, đang giảm" : PHASE_TXT[r.phase];
       h += `<div class="trow ${r.phase === "C" || r.phase === "D" ? "hl" : rr ? "pp" : ""}" data-chart="${esc(r.symbol)}">

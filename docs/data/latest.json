@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T15:54:53+07:00",
+ "generated_at": "2026-09-27T12:15:18+07:00",
  "trade_date": "2026-09-25",
  "watchlist": {
   "n": 39,
@@ -1880,8 +1880,8 @@
    "tr_age": 32,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "bu",
-   "last_event_date": "2026-05-21",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -2.2
   },
   {
@@ -1910,8 +1910,8 @@
    "tr_age": 29,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "st",
-   "last_event_date": "2026-02-10",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -13.4
   },
   {
@@ -2060,8 +2060,8 @@
    "tr_age": null,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "test",
-   "last_event_date": "2026-07-01",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": 1.6
   },
   {
@@ -2180,8 +2180,8 @@
    "tr_age": null,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "st",
-   "last_event_date": "2026-07-17",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -6.3
   },
   {
@@ -2285,8 +2285,8 @@
    "tr_age": 30,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "ar",
-   "last_event_date": "2026-08-04",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -4.2
   },
   {
@@ -2360,8 +2360,8 @@
    "tr_age": 23,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "st",
-   "last_event_date": "2026-06-02",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -11.3
   },
   {
@@ -2405,8 +2405,8 @@
    "tr_age": 32,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "ut",
-   "last_event_date": "2026-05-22",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": -10.0
   },
   {
@@ -2420,8 +2420,8 @@
    "tr_age": null,
    "tr_origin": "range",
    "tr_kind": "acc",
-   "last_event": "test",
-   "last_event_date": "2026-02-13",
+   "last_event": null,
+   "last_event_date": null,
    "rs_20": 10.2
   }
  ],
@@ -2436,13 +2436,7 @@
   "none": 11
  },
  "push": {
-  "source": "fallback",
-  "n_devices": 1,
-  "sent": 0,
-  "gone": 0,
-  "failed": 0,
-  "errors": [],
-  "n_signals": 0
+  "skipped": true
  },
  "history": [
   {

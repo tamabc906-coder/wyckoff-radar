@@ -618,7 +618,15 @@ def signals_at(R: Result, i: int) -> list[dict]:
 def board_state(R: Result, i: int) -> dict:
     """Trạng thái mã cho tab Bảng tại nến cuối: giai đoạn, biên vùng, tuổi, sự kiện gần nhất."""
     tr = R.tr or (R.markup.tr if R.markup else None)
-    last = next((e for e in reversed(R.events) if EVENTS[e["id"]]["direction"] != "label"), None)
+    # Bỏ sự kiện thuộc các vùng ĐÃ ĐÓNG trước vùng đang hiện; giữ sự kiện sau khi vùng trước đóng (vd SC mở màn vùng
+    # "nền" hình thành muộn hơn — DGC/GAS/SSI SC 20–22/07, vùng từ 10/08). Nến đóng vùng cũ có thể đồng thời là SC mới.
+    # Trước 27/09/2026 lấy sự kiện cuối của cả lịch sử → VPB hiện "Test 13/02" của vùng 21,24–24,01 (thủng 10/03)
+    # cạnh biên vùng mới 18,63–21,32.
+    cut = -1
+    if tr is not None:
+        cut = max((t.end for t in R.trs if t is not tr and t.end is not None and t.end <= tr.start), default=-1)
+    last = next((e for e in reversed(R.events) if EVENTS[e["id"]]["direction"] != "label"
+                 and (e["i"] > cut or (e["i"] == cut and e["id"] in ("sc", "bc")))), None)
     st = {"phase": R.phase(), "tr": tr.to_dict() if tr else None, "tr_age": tr.age(i) if R.tr else None,
           "last_event": last["id"] if last else None, "last_event_date": last["d"].isoformat() if last else None}
     return st

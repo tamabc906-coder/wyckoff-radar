@@ -187,3 +187,21 @@ def test_relative_strength():
     rs = W.relative_strength(b, idx, 20)
     assert rs is not None and rs > 0                  # mã tăng 20 % vs chỉ số 10 %
     assert W.relative_strength(b[:10], idx, 20) is None
+
+
+def test_board_last_event_only_from_current_range():
+    # 27/09/2026 (VPB): vùng cũ có sự kiện rồi thủng xuống; vùng mới "nền" không có sự kiện nào →
+    # bảng không được mượn sự kiện của vùng cũ. Sự kiện xảy ra SAU khi vùng cũ đóng (SC mở màn) thì vẫn lấy.
+    bars = _bars(accumulation_rows())
+    R = W.analyze(bars)
+    last = len(bars) - 1
+    old = W.TR("acc", "range", 0, 9.0, 10.0)
+    old.end = last - 8
+    tr = W.TR("acc", "range", last - 5, 10.0, 11.0, phase="B")
+    R.trs, R.tr, R.markup = [old, tr], tr, None
+    R.events = [e for e in R.events if e["i"] < old.end]      # chỉ còn sự kiện của vùng cũ
+    assert R.events
+    st = W.board_state(R, last)
+    assert st["last_event"] is None and st["last_event_date"] is None
+    R.events.append({"i": last - 7, "at": last - 7, "d": bars[last - 7]["d"], "id": "sc"})   # giữa hai vùng
+    assert W.board_state(R, last)["last_event"] == "sc"
