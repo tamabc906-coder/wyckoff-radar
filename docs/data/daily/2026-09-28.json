@@ -1,0 +1,26 @@
+{
+ "trade_date": "2026-09-28",
+ "generated_at": "2026-09-28T15:56:18+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "AGR",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 12.25,
+   "push": true,
+   "grade": "★"
+  },
+  {
+   "symbol": "CII",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 12.25,
+   "push": true,
+   "grade": "★"
+  }
+ ],
+ "stale": []
+}

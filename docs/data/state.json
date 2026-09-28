@@ -1,24 +1,29 @@
 {
- "last_run": "2026-09-27T12:15:18+07:00",
- "last_trade_date": "2026-09-25",
+ "last_run": "2026-09-28T15:56:18+07:00",
+ "last_trade_date": "2026-09-28",
  "dnse_error": "",
  "push": {
-  "skipped": true
+  "source": "fallback",
+  "n_devices": 1,
+  "sent": 2,
+  "gone": 0,
+  "failed": 0,
+  "errors": [],
+  "n_signals": 2
  },
  "watchlist": {
   "n": 39,
   "source": "kingstock"
  },
  "last_signals": [
-  "DPR:ut",
-  "AGR:st",
-  "CTG:st"
+  "AGR:spring2",
+  "CII:spring2"
  ],
  "devices": {
   "n": 1,
   "source": "fallback",
   "vapid": true,
-  "checked_at": "2026-09-27T12:16:08+07:00"
+  "checked_at": "2026-09-28T15:56:18+07:00"
  },
  "welcome": {
   "at": "2026-09-22T12:53:47+07:00",
