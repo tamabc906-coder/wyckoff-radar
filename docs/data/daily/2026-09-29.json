@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-09-29",
+ "generated_at": "2026-09-29T15:56:46+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "SHB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 11.45,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
