@@ -1,0 +1,35 @@
+{
+ "trade_date": "2026-09-30",
+ "generated_at": "2026-09-30T15:57:00+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "PVD",
+   "event": "spring3",
+   "name": "Spring #3 (KL thấp)",
+   "direction": "buy",
+   "price": 18.3,
+   "push": false,
+   "grade": "đo kém"
+  },
+  {
+   "symbol": "DPR",
+   "event": "ut",
+   "name": "Upthrust (UT)",
+   "direction": "watch",
+   "price": 38.6,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "PVS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 33.5,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
