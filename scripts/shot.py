@@ -40,7 +40,7 @@ def main() -> int:
                              f'style="width:420px;height:{h}px;border:0;display:block"></iframe></body>', encoding="utf-8")
             png = OUT / f"{tab}.png"
             subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--window-size=520,{h + 20}",
-                            "--virtual-time-budget=8000", f"--screenshot={png}", frame.as_uri()],
+                            "--virtual-time-budget=20000", f"--screenshot={png}", frame.as_uri()],
                            check=True, capture_output=True, timeout=90)
             frame.unlink()
             print(f"{tab}: {png}")
