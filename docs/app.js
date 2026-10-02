@@ -303,16 +303,15 @@
     const end = cur.end, start = Math.max(0, end - n);
     const padL = 6, padR = 46, padT = 26, padB = 20, volH = 70, pw = W - padL - padR, ph = Hh - padT - padB - volH - 8;
     const trs = cur.trs.map((t) => ({ ...t, a: bars.findIndex((b) => b[0] >= t.from), z: bars.findIndex((b) => b[0] >= t.to) })).filter((t) => t.a >= 0);
-    // MA20 giá đóng cửa: tính trên toàn chuỗi để nến đầu khung vẫn đúng
-    const ma = new Array(bars.length).fill(null); let sum = 0;
-    for (let i = 0; i < bars.length; i++) { sum += bars[i][C]; if (i >= 20) sum -= bars[i - 20][C]; if (i >= 19) ma[i] = sum / 20; }
-    cur.ma = ma;
     let lo = Infinity, hi = -Infinity;
-    for (let i = start; i < end; i++) { lo = Math.min(lo, bars[i][L]); hi = Math.max(hi, bars[i][H]); if (ma[i] != null) { lo = Math.min(lo, ma[i]); hi = Math.max(hi, ma[i]); } }
+    for (let i = start; i < end; i++) { lo = Math.min(lo, bars[i][L]); hi = Math.max(hi, bars[i][H]); }
     for (const t of trs) if (t.z < 0 || t.z >= start) { lo = Math.min(lo, t.lo); hi = Math.max(hi, t.hi); }
     const span = (hi - lo) || 1; lo -= span * .05; hi += span * .05;
     const bw = pw / n, x = (i) => padL + (i - start + .5) * bw, y = (v) => padT + (hi - v) / (hi - lo) * ph;
-    const vTop = padT + ph + 8, vmax = Math.max(...bars.slice(start, end).map((b) => b[V])) || 1, vy = (v) => vTop + volH - v / vmax * volH;
+    // TB20 KL = trung bình 20 nến trước (cùng định nghĩa tô cột đỏ/xanh)
+    const avs = []; for (let i = start; i < end; i++) { const w20 = bars.slice(Math.max(0, i - 20), i); avs.push(w20.length ? w20.reduce((a, b) => a + b[V], 0) / w20.length : 0); }
+    cur.avs = avs;
+    const vTop = padT + ph + 8, vmax = Math.max(...bars.slice(start, end).map((b) => b[V]), ...avs) || 1, vy = (v) => vTop + volH - v / vmax * volH;
     cur.layout = { start, end, bw, padL, x, y };
     ctx.clearRect(0, 0, W, Hh); ctx.fillStyle = "#FFFDF8"; ctx.fillRect(0, 0, W, Hh);
     // vùng đi ngang
@@ -334,20 +333,19 @@
     // khối lượng: TB20 tính tại chỗ (20 nến trước)
     const cw = Math.max(1, bw * .66);
     for (let i = start; i < end; i++) {
-      const w20 = bars.slice(Math.max(0, i - 20), i), av = w20.length ? w20.reduce((a, b) => a + b[V], 0) / w20.length : 0, vr = av ? bars[i][V] / av : 1;
+      const av = avs[i - start], vr = av ? bars[i][V] / av : 1;
       ctx.fillStyle = vr >= 1.5 ? "#B84A3A" : vr <= 0.7 ? "#2E7D4F" : "#C9BFA9";
       ctx.fillRect(x(i) - cw / 2, vy(bars[i][V]), cw, vTop + volH - vy(bars[i][V]));
     }
+    ctx.strokeStyle = "#2F6DB5"; ctx.lineWidth = 1.5; ctx.beginPath(); let pen = false;
+    for (let i = start; i < end; i++) { const av = avs[i - start]; if (!av) { pen = false; continue; } if (pen) ctx.lineTo(x(i), vy(av)); else { ctx.moveTo(x(i), vy(av)); pen = true; } }
+    ctx.stroke(); ctx.lineWidth = 1;
+    const avLast = avs[avs.length - 1];
+    ctx.font = "700 9px Archivo, Arial, sans-serif"; ctx.fillStyle = "#2F6DB5"; ctx.textAlign = "left";
+    if (avLast) ctx.fillText(`TB20 KL ${(avLast / 1e3).toFixed(0)}k`, padL + 2, vTop + 6);
     ctx.strokeStyle = "#EBE3D2"; ctx.beginPath(); ctx.moveTo(padL, vTop - 4); ctx.lineTo(padL + pw, vTop - 4); ctx.stroke();
     // nến
     for (let i = start; i < end; i++) { const b = bars[i], col = b[C] >= b[O] ? "#2E7D4F" : "#B84A3A", xx = x(i); ctx.strokeStyle = col; ctx.fillStyle = b[C] >= b[O] ? "#FFFFFF" : col; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(xx, y(b[H])); ctx.lineTo(xx, y(b[L])); ctx.stroke(); const yo = y(b[O]), yc = y(b[C]), top = Math.min(yo, yc), hh = Math.max(1, Math.abs(yo - yc)); if (cw >= 3) { ctx.fillRect(xx - cw / 2, top, cw, hh); ctx.strokeRect(xx - cw / 2, top, cw, hh); } else { ctx.beginPath(); ctx.moveTo(xx, top); ctx.lineTo(xx, top + hh); ctx.stroke(); } }
-    // MA20
-    ctx.strokeStyle = "#2F6DB5"; ctx.lineWidth = 1.5; ctx.beginPath(); let pen = false;
-    for (let i = start; i < end; i++) { if (ma[i] == null) { pen = false; continue; } if (pen) ctx.lineTo(x(i), y(ma[i])); else { ctx.moveTo(x(i), y(ma[i])); pen = true; } }
-    ctx.stroke(); ctx.lineWidth = 1;
-    const maLast = ma[end - 1];
-    ctx.font = "700 10px Archivo, Arial, sans-serif"; ctx.fillStyle = "#2F6DB5"; ctx.textAlign = "left";
-    ctx.fillText("MA20" + (maLast != null ? " " + px(maLast) : ""), padL + 2, padT - 10);
     // nhãn sự kiện
     const idx = new Map(bars.map((b, i) => [b[0], i]));
     ctx.font = "700 9px Archivo, Arial, sans-serif";
@@ -373,7 +371,7 @@
     if (i < Ly.start || i >= Ly.end) { cur.hover = -1; tip.style.display = "none"; draw(Ly.end - Ly.start); return; }
     cur.hover = i;
     const b = cur.bars[i], m = cur.marks.find((x) => x[0] === b[0]);
-    tip.innerHTML = `<b>${dmy(b[0])}</b><br>M ${px(b[O])} · C ${px(b[H])} · T ${px(b[L])} · Đ <b>${px(b[C])}</b><br>KL ${(b[V] / 1e3).toFixed(0)}k` + (cur.ma && cur.ma[i] != null ? ` · <span style="color:#2F6DB5">MA20 ${px(cur.ma[i])}</span>` : "") + (m ? `<br><b>${esc((D.events[m[1]] || {}).name || m[1])}</b>` : "");
+    tip.innerHTML = `<b>${dmy(b[0])}</b><br>M ${px(b[O])} · C ${px(b[H])} · T ${px(b[L])} · Đ <b>${px(b[C])}</b><br>KL ${(b[V] / 1e3).toFixed(0)}k` + (cur.avs && cur.avs[i - Ly.start] ? ` · <span style="color:#2F6DB5">TB20 ${(cur.avs[i - Ly.start] / 1e3).toFixed(0)}k</span>` : "") + (m ? `<br><b>${esc((D.events[m[1]] || {}).name || m[1])}</b>` : "");
     tip.style.display = "block";
     const tw = tip.offsetWidth, left = p + 12 + tw > rect.width ? p - tw - 12 : p + 12;
     tip.style.left = left + "px"; tip.style.top = Math.max(6, Math.min(cy - rect.top - 16, rect.height - tip.offsetHeight - 44)) + "px";
