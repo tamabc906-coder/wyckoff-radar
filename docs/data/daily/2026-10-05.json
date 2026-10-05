@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-05",
+ "generated_at": "2026-10-05T15:59:21+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "TPB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 11.9,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
