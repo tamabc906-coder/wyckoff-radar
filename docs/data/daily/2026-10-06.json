@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-06",
+ "generated_at": "2026-10-06T15:57:41+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "CTG",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 29.8,
+   "push": true,
+   "grade": "★"
+  }
+ ],
+ "stale": []
+}
