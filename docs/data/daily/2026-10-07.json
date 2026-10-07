@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-07",
+ "generated_at": "2026-10-07T15:58:29+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "PVS",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 33.6,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
