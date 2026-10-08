@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-07T15:58:29+07:00",
- "trade_date": "2026-10-07",
+ "generated_at": "2026-10-08T15:59:27+07:00",
+ "trade_date": "2026-10-08",
  "watchlist": {
   "n": 39,
   "source": "kingstock"
@@ -167,603 +167,13 @@
   }
  },
  "stats_generated_at": "2026-09-22T21:57:20+07:00",
- "signals": [
-  {
-   "symbol": "PVS",
-   "company_name": "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
-   "exchange": "HOSE",
-   "price": 33.6,
-   "change_pct": 0.0,
-   "volume": 3276300,
-   "vol_ratio": 0.82,
-   "spread_atr": 0.61,
-   "close_pos": 13,
-   "body_atr": 0.0,
-   "event": "st",
-   "name": "Kiểm tra thứ cấp (ST)",
-   "direction": "watch",
-   "priority": 80,
-   "hint": "Quay lại vùng SC với KL và spread nhỏ hơn — cung đã yếu.",
-   "advice": "Chưa mua; vùng bắt đầu xây nguyên nhân.",
-   "caution": "",
-   "grade": null,
-   "stats": {
-    "mean10": -0.00219,
-    "n": 852,
-    "base10": 0.005709488096553333
-   },
-   "push": false,
-   "tr": {
-    "kind": "dist",
-    "origin": "bc",
-    "start": 2720,
-    "end": null,
-    "lo": 29.17,
-    "hi": 33.75,
-    "phase": "B",
-    "sc": 2720,
-    "ar": 2726,
-    "st": [
-     2734,
-     2742,
-     2747
-    ],
-    "spring": null,
-    "spring_kind": "",
-    "sos": null,
-    "lps": null,
-    "bu": null,
-    "ut": [
-     2730,
-     2733
-    ],
-    "end_reason": ""
-   },
-   "phase": "PP",
-   "age": null,
-   "break_pct": null,
-   "stop": null,
-   "stop_pct": null,
-   "target": null,
-   "rr": null,
-   "beyond_target": false,
-   "t2_date": "2026-10-12",
-   "candles": [
-    [
-     "2026-07-13",
-     30.25,
-     30.92,
-     30.17,
-     30.83,
-     3181200
-    ],
-    [
-     "2026-07-14",
-     31.25,
-     32.67,
-     30.42,
-     32.33,
-     6103000
-    ],
-    [
-     "2026-07-15",
-     32.33,
-     32.42,
-     31.33,
-     31.67,
-     1991200
-    ],
-    [
-     "2026-07-16",
-     31.5,
-     32.33,
-     29.83,
-     32.33,
-     3114500
-    ],
-    [
-     "2026-07-17",
-     31.67,
-     32.33,
-     31.0,
-     31.92,
-     1522700
-    ],
-    [
-     "2026-07-20",
-     31.92,
-     32.33,
-     30.58,
-     30.58,
-     2728600
-    ],
-    [
-     "2026-07-21",
-     30.58,
-     30.83,
-     27.58,
-     28.08,
-     12004300
-    ],
-    [
-     "2026-07-22",
-     28.08,
-     28.67,
-     26.83,
-     27.58,
-     4234900
-    ],
-    [
-     "2026-07-23",
-     27.5,
-     28.58,
-     26.83,
-     28.58,
-     3176500
-    ],
-    [
-     "2026-07-24",
-     29.17,
-     29.25,
-     28.5,
-     28.5,
-     2616400
-    ],
-    [
-     "2026-07-27",
-     28.17,
-     28.83,
-     27.67,
-     27.75,
-     2724800
-    ],
-    [
-     "2026-07-28",
-     28.0,
-     28.58,
-     27.17,
-     28.0,
-     2351600
-    ],
-    [
-     "2026-07-29",
-     28.0,
-     28.5,
-     27.92,
-     28.08,
-     771800
-    ],
-    [
-     "2026-07-30",
-     27.92,
-     29.33,
-     27.92,
-     29.0,
-     1950800
-    ],
-    [
-     "2026-07-31",
-     29.08,
-     29.25,
-     28.42,
-     28.42,
-     2386800
-    ],
-    [
-     "2026-08-03",
-     29.0,
-     29.08,
-     28.25,
-     28.75,
-     2021400
-    ],
-    [
-     "2026-08-04",
-     28.75,
-     29.17,
-     28.67,
-     28.75,
-     1416600
-    ],
-    [
-     "2026-08-05",
-     28.75,
-     28.75,
-     28.25,
-     28.5,
-     2239500
-    ],
-    [
-     "2026-08-06",
-     28.5,
-     29.0,
-     28.25,
-     28.33,
-     1589900
-    ],
-    [
-     "2026-08-07",
-     28.33,
-     29.5,
-     28.33,
-     28.58,
-     2987800
-    ],
-    [
-     "2026-08-10",
-     28.75,
-     29.33,
-     28.67,
-     29.17,
-     1805500
-    ],
-    [
-     "2026-08-11",
-     29.33,
-     29.67,
-     29.17,
-     29.17,
-     2228700
-    ],
-    [
-     "2026-08-12",
-     29.17,
-     30.0,
-     28.83,
-     29.67,
-     1850400
-    ],
-    [
-     "2026-08-13",
-     29.67,
-     29.83,
-     29.08,
-     29.17,
-     1792900
-    ],
-    [
-     "2026-08-14",
-     29.08,
-     29.33,
-     28.75,
-     28.75,
-     2456600
-    ],
-    [
-     "2026-08-17",
-     28.33,
-     29.0,
-     26.58,
-     28.75,
-     2321500
-    ],
-    [
-     "2026-08-18",
-     28.42,
-     30.17,
-     28.33,
-     29.75,
-     4129700
-    ],
-    [
-     "2026-08-19",
-     30.0,
-     30.17,
-     29.58,
-     30.0,
-     2749900
-    ],
-    [
-     "2026-08-20",
-     30.42,
-     31.08,
-     29.75,
-     30.83,
-     3513600
-    ],
-    [
-     "2026-08-21",
-     30.67,
-     31.08,
-     29.75,
-     30.83,
-     2866300
-    ],
-    [
-     "2026-08-24",
-     30.92,
-     32.0,
-     30.92,
-     31.67,
-     4872300
-    ],
-    [
-     "2026-08-25",
-     31.67,
-     32.08,
-     31.33,
-     31.67,
-     2674400
-    ],
-    [
-     "2026-08-26",
-     31.67,
-     33.75,
-     31.33,
-     32.92,
-     5724500
-    ],
-    [
-     "2026-08-27",
-     33.0,
-     33.0,
-     32.42,
-     32.58,
-     2020600
-    ],
-    [
-     "2026-08-28",
-     32.5,
-     33.17,
-     32.5,
-     33.0,
-     3229000
-    ],
-    [
-     "2026-09-03",
-     33.25,
-     33.75,
-     32.25,
-     32.5,
-     3375300
-    ],
-    [
-     "2026-09-04",
-     32.5,
-     32.83,
-     31.92,
-     32.25,
-     1917400
-    ],
-    [
-     "2026-09-07",
-     32.08,
-     32.5,
-     31.08,
-     31.08,
-     2599500
-    ],
-    [
-     "2026-09-08",
-     30.0,
-     32.5,
-     29.17,
-     32.42,
-     2113700
-    ],
-    [
-     "2026-09-09",
-     32.42,
-     34.0,
-     32.0,
-     32.0,
-     2531000
-    ],
-    [
-     "2026-09-10",
-     32.08,
-     32.75,
-     31.83,
-     32.25,
-     1813100
-    ],
-    [
-     "2026-09-11",
-     32.25,
-     33.0,
-     31.92,
-     32.0,
-     5551800
-    ],
-    [
-     "2026-09-14",
-     28.9,
-     34.0,
-     28.9,
-     32.6,
-     3681700
-    ],
-    [
-     "2026-09-15",
-     33.6,
-     34.4,
-     32.0,
-     34.2,
-     8111800
-    ],
-    [
-     "2026-09-16",
-     34.2,
-     35.3,
-     34.1,
-     34.3,
-     5568000
-    ],
-    [
-     "2026-09-17",
-     34.0,
-     34.3,
-     33.0,
-     33.3,
-     5857400
-    ],
-    [
-     "2026-09-18",
-     33.0,
-     33.7,
-     33.0,
-     33.3,
-     2163100
-    ],
-    [
-     "2026-09-21",
-     33.3,
-     33.9,
-     33.1,
-     33.3,
-     2958900
-    ],
-    [
-     "2026-09-22",
-     33.3,
-     33.6,
-     32.6,
-     33.2,
-     3746200
-    ],
-    [
-     "2026-09-23",
-     33.1,
-     33.5,
-     32.8,
-     33.2,
-     2428100
-    ],
-    [
-     "2026-09-24",
-     33.2,
-     33.5,
-     32.1,
-     32.3,
-     3545500
-    ],
-    [
-     "2026-09-25",
-     32.5,
-     32.6,
-     31.6,
-     31.6,
-     2540200
-    ],
-    [
-     "2026-09-28",
-     31.6,
-     33.5,
-     31.6,
-     33.4,
-     4510100
-    ],
-    [
-     "2026-09-29",
-     33.1,
-     34.4,
-     33.0,
-     34.1,
-     7205400
-    ],
-    [
-     "2026-09-30",
-     34.1,
-     34.2,
-     33.3,
-     33.5,
-     3539000
-    ],
-    [
-     "2026-10-01",
-     33.4,
-     34.9,
-     33.4,
-     34.0,
-     5231200
-    ],
-    [
-     "2026-10-02",
-     34.1,
-     34.6,
-     33.1,
-     33.5,
-     2516100
-    ],
-    [
-     "2026-10-05",
-     33.5,
-     33.9,
-     33.1,
-     33.1,
-     1646600
-    ],
-    [
-     "2026-10-06",
-     33.0,
-     33.6,
-     32.1,
-     33.6,
-     4638400
-    ],
-    [
-     "2026-10-07",
-     33.6,
-     34.3,
-     33.5,
-     33.6,
-     3276300
-    ]
-   ],
-   "marks": [
-    [
-     6,
-     "sc"
-    ],
-    [
-     13,
-     "ar"
-    ],
-    [
-     15,
-     "st"
-    ],
-    [
-     25,
-     "st"
-    ],
-    [
-     32,
-     "bc"
-    ],
-    [
-     38,
-     "ar"
-    ],
-    [
-     42,
-     "ut"
-    ],
-    [
-     45,
-     "ut"
-    ],
-    [
-     46,
-     "st"
-    ],
-    [
-     54,
-     "st"
-    ],
-    [
-     59,
-     "st"
-    ]
-   ]
-  }
- ],
+ "signals": [],
  "board": [
   {
    "symbol": "ACB",
    "company_name": "Ngân hàng Thương mại Cổ phần Á Châu",
-   "price": 20.65,
-   "change_pct": 0.24,
+   "price": 20.35,
+   "change_pct": -1.45,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -772,13 +182,13 @@
    "tr_kind": null,
    "last_event": "bc",
    "last_event_date": "2026-06-03",
-   "rs_20": -4.1
+   "rs_20": -4.4
   },
   {
    "symbol": "AGR",
    "company_name": "Công ty Cổ phần Chứng khoán Agribank",
-   "price": 11.6,
-   "change_pct": 0.0,
+   "price": 11.25,
+   "change_pct": -3.02,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -787,28 +197,28 @@
    "tr_kind": null,
    "last_event": "spring2",
    "last_event_date": "2026-09-28",
-   "rs_20": -5.9
+   "rs_20": -9.0
   },
   {
    "symbol": "BID",
    "company_name": "Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam ",
-   "price": 34.5,
-   "change_pct": -0.29,
+   "price": 33.9,
+   "change_pct": -1.74,
    "phase": "B",
    "tr_lo": 32.15,
    "tr_hi": 37.93,
-   "tr_age": 40,
+   "tr_age": 41,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": -1.2
+   "rs_20": -1.9
   },
   {
    "symbol": "CEO",
    "company_name": "Công ty Cổ phần Tập Đoàn C.E.O",
-   "price": 10.2,
-   "change_pct": -2.86,
+   "price": 9.9,
+   "change_pct": -2.94,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -817,13 +227,13 @@
    "tr_kind": null,
    "last_event": "st",
    "last_event_date": "2026-09-22",
-   "rs_20": -15.6
+   "rs_20": -17.4
   },
   {
    "symbol": "CII",
    "company_name": "Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh ",
-   "price": 12.0,
-   "change_pct": -2.83,
+   "price": 11.7,
+   "change_pct": -2.5,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -832,73 +242,73 @@
    "tr_kind": null,
    "last_event": "spring2",
    "last_event_date": "2026-09-28",
-   "rs_20": -12.9
+   "rs_20": -12.4
   },
   {
    "symbol": "CTG",
    "company_name": "Ngân hàng Thương mại Cổ phần Công Thương Việt Nam",
-   "price": 29.75,
-   "change_pct": -0.17,
+   "price": 29.2,
+   "change_pct": -1.85,
    "phase": "C",
    "tr_lo": 29.25,
    "tr_hi": 32.0,
-   "tr_age": 52,
+   "tr_age": 53,
    "tr_origin": "sc",
    "tr_kind": "acc",
    "last_event": "spring2",
    "last_event_date": "2026-10-06",
-   "rs_20": 1.0
+   "rs_20": 0.5
   },
   {
    "symbol": "DCM",
    "company_name": "Công ty Cổ phần Phân Bón Dầu khí Cà Mau",
-   "price": 34.2,
-   "change_pct": 1.48,
+   "price": 34.4,
+   "change_pct": 0.58,
    "phase": "B",
    "tr_lo": 29.7,
    "tr_hi": 34.84,
-   "tr_age": 53,
+   "tr_age": 54,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "st",
    "last_event_date": "2026-08-17",
-   "rs_20": 9.2
+   "rs_20": 11.3
   },
   {
    "symbol": "DGC",
    "company_name": "Công ty cổ phần Tập đoàn Hóa chất Đức Giang",
-   "price": 33.15,
-   "change_pct": -3.49,
+   "price": 32.5,
+   "change_pct": -1.96,
    "phase": "B",
    "tr_lo": 29.72,
    "tr_hi": 37.96,
-   "tr_age": 39,
+   "tr_age": 40,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "sc",
    "last_event_date": "2026-07-22",
-   "rs_20": -10.6
+   "rs_20": -12.3
   },
   {
    "symbol": "DPR",
    "company_name": "Công ty Cổ phần Cao su Đồng Phú",
-   "price": 37.9,
-   "change_pct": 0.8,
+   "price": 37.8,
+   "change_pct": -0.26,
    "phase": "B",
    "tr_lo": 34.4,
    "tr_hi": 38.85,
-   "tr_age": 41,
+   "tr_age": 42,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "ut",
    "last_event_date": "2026-10-02",
-   "rs_20": 2.8
+   "rs_20": 3.1
   },
   {
    "symbol": "DXG",
    "company_name": "Công ty Cổ phần Bluemarq Group",
-   "price": 9.78,
-   "change_pct": -1.31,
+   "price": 9.61,
+   "change_pct": -1.74,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -907,28 +317,28 @@
    "tr_kind": null,
    "last_event": "bc",
    "last_event_date": "2026-08-14",
-   "rs_20": -9.8
+   "rs_20": -10.1
   },
   {
    "symbol": "EIB",
    "company_name": "Ngân hàng Thương mại Cổ phần Xuất nhập khẩu Việt Nam",
-   "price": 16.4,
-   "change_pct": 0.0,
+   "price": 16.1,
+   "change_pct": -1.83,
    "phase": "C",
    "tr_lo": 16.4,
    "tr_hi": 18.4,
-   "tr_age": 52,
+   "tr_age": 53,
    "tr_origin": "sc",
    "tr_kind": "acc",
    "last_event": "test",
    "last_event_date": "2026-09-24",
-   "rs_20": 2.0
+   "rs_20": 0.5
   },
   {
    "symbol": "FPT",
    "company_name": "Công ty Cổ phần FPT",
    "price": 59.7,
-   "change_pct": -1.16,
+   "change_pct": 0.0,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -937,13 +347,13 @@
    "tr_kind": null,
    "last_event": "sow",
    "last_event_date": "2026-07-15",
-   "rs_20": -5.5
+   "rs_20": -7.3
   },
   {
    "symbol": "GAS",
    "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
-   "price": 78.4,
-   "change_pct": -1.13,
+   "price": 82.0,
+   "change_pct": 4.59,
    "phase": "E",
    "tr_lo": 62.58,
    "tr_hi": 77.55,
@@ -952,13 +362,13 @@
    "tr_kind": "acc",
    "last_event": "sc",
    "last_event_date": "2026-07-21",
-   "rs_20": -1.9
+   "rs_20": 4.9
   },
   {
    "symbol": "GMD",
    "company_name": "Công Ty TNHH Vận Tải Và Công Nghiệp Hàng Hải Gemadept Holding",
    "price": 54.2,
-   "change_pct": 4.23,
+   "change_pct": 0.0,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -967,13 +377,13 @@
    "tr_kind": null,
    "last_event": "lps",
    "last_event_date": "2026-02-12",
-   "rs_20": 12.1
+   "rs_20": 13.7
   },
   {
    "symbol": "GVR",
    "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - Công ty cổ phần",
-   "price": 34.0,
-   "change_pct": 3.66,
+   "price": 33.85,
+   "change_pct": -0.44,
    "phase": "E",
    "tr_lo": 25.55,
    "tr_hi": 30.9,
@@ -982,13 +392,13 @@
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": 11.2
+   "rs_20": 12.3
   },
   {
    "symbol": "HCM",
    "company_name": "Công ty Cổ phần Chứng khoán Thành phố Hồ Chí Minh",
-   "price": 23.0,
-   "change_pct": -2.13,
+   "price": 23.6,
+   "change_pct": 2.61,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -997,28 +407,28 @@
    "tr_kind": null,
    "last_event": "ar",
    "last_event_date": "2026-01-26",
-   "rs_20": -9.0
+   "rs_20": -5.6
   },
   {
    "symbol": "HPG",
    "company_name": "Công ty Cổ phần Tập đoàn Hòa Phát",
-   "price": 20.35,
-   "change_pct": -0.73,
+   "price": 20.15,
+   "change_pct": -0.98,
    "phase": "B",
    "tr_lo": 20.5,
    "tr_hi": 22.05,
-   "tr_age": 54,
+   "tr_age": 55,
    "tr_origin": "sc",
    "tr_kind": "acc",
    "last_event": "st",
    "last_event_date": "2026-09-21",
-   "rs_20": -3.8
+   "rs_20": -3.0
   },
   {
    "symbol": "KBC",
    "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
-   "price": 25.25,
-   "change_pct": 1.0,
+   "price": 25.4,
+   "change_pct": 0.59,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1027,13 +437,13 @@
    "tr_kind": null,
    "last_event": "spring2",
    "last_event_date": "2026-09-14",
-   "rs_20": -2.4
+   "rs_20": -1.0
   },
   {
    "symbol": "LPB",
    "company_name": "Ngân hàng Thương mại cổ phần Lộc Phát Việt Nam ",
-   "price": 42.0,
-   "change_pct": -4.33,
+   "price": 40.65,
+   "change_pct": -3.21,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1042,13 +452,13 @@
    "tr_kind": null,
    "last_event": "sos",
    "last_event_date": "2026-04-06",
-   "rs_20": -9.1
+   "rs_20": -11.2
   },
   {
    "symbol": "MBB",
    "company_name": "Ngân hàng Thương mại Cổ phần Quân đội ",
-   "price": 19.1,
-   "change_pct": -0.52,
+   "price": 18.9,
+   "change_pct": -1.05,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1057,13 +467,13 @@
    "tr_kind": null,
    "last_event": "bu",
    "last_event_date": "2026-01-28",
-   "rs_20": -1.5
+   "rs_20": -1.1
   },
   {
    "symbol": "MBS",
    "company_name": "Công ty Cổ phần chứng khoán MB",
-   "price": 15.1,
-   "change_pct": -1.95,
+   "price": 14.7,
+   "change_pct": -2.65,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1072,13 +482,13 @@
    "tr_kind": null,
    "last_event": "st",
    "last_event_date": "2026-09-22",
-   "rs_20": -8.0
+   "rs_20": -9.6
   },
   {
    "symbol": "MSB",
    "company_name": "Ngân hàng Thương mại Cổ phần Hàng Hải Việt Nam",
-   "price": 14.65,
-   "change_pct": 1.74,
+   "price": 14.75,
+   "change_pct": 0.68,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1087,13 +497,13 @@
    "tr_kind": null,
    "last_event": "bc",
    "last_event_date": "2026-05-19",
-   "rs_20": 18.3
+   "rs_20": 19.8
   },
   {
    "symbol": "PLX",
    "company_name": "Tập đoàn Xăng dầu Việt Nam",
-   "price": 36.2,
-   "change_pct": 0.0,
+   "price": 37.6,
+   "change_pct": 3.87,
    "phase": "E",
    "tr_lo": 30.8,
    "tr_hi": 36.06,
@@ -1102,58 +512,58 @@
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": 5.4
+   "rs_20": 11.4
   },
   {
    "symbol": "PVD",
    "company_name": "Tổng Công ty Cổ phần Khoan và Dịch vụ khoan dầu khí",
-   "price": 18.3,
-   "change_pct": -1.61,
+   "price": 18.25,
+   "change_pct": -0.27,
    "phase": "C",
    "tr_lo": 17.68,
    "tr_hi": 21.6,
-   "tr_age": 93,
+   "tr_age": 94,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "spring3",
    "last_event_date": "2026-09-30",
-   "rs_20": 2.2
+   "rs_20": 3.8
   },
   {
    "symbol": "PVS",
    "company_name": "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
-   "price": 33.6,
-   "change_pct": 0.0,
+   "price": 34.2,
+   "change_pct": 1.79,
    "phase": "PP",
    "tr_lo": 29.17,
    "tr_hi": 33.75,
-   "tr_age": 27,
+   "tr_age": 28,
    "tr_origin": "bc",
    "tr_kind": "dist",
    "last_event": "st",
    "last_event_date": "2026-10-07",
-   "rs_20": 9.4
+   "rs_20": 11.6
   },
   {
    "symbol": "SHB",
    "company_name": "Ngân hàng Thương mại Cổ phần Sài Gòn - Hà Nội ",
-   "price": 10.8,
-   "change_pct": -1.37,
+   "price": 10.05,
+   "change_pct": -6.94,
    "phase": "B",
    "tr_lo": 11.1,
    "tr_hi": 12.15,
-   "tr_age": 34,
+   "tr_age": 35,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "st",
    "last_event_date": "2026-09-29",
-   "rs_20": -4.2
+   "rs_20": -10.0
   },
   {
    "symbol": "SHS",
    "company_name": "Công ty Cổ phần Chứng khoán Sài Gòn Hà Nội ",
-   "price": 12.6,
-   "change_pct": -2.33,
+   "price": 11.6,
+   "change_pct": -4.13,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1162,13 +572,13 @@
    "tr_kind": null,
    "last_event": "st",
    "last_event_date": "2026-09-18",
-   "rs_20": -11.9
+   "rs_20": -14.7
   },
   {
    "symbol": "SSI",
    "company_name": "Công ty Cổ phần chứng khoán SSI",
-   "price": 19.65,
-   "change_pct": -0.51,
+   "price": 19.05,
+   "change_pct": -3.05,
    "phase": "E",
    "tr_lo": 17.35,
    "tr_hi": 20.3,
@@ -1177,13 +587,13 @@
    "tr_kind": "acc",
    "last_event": "sc",
    "last_event_date": "2026-07-20",
-   "rs_20": -2.0
+   "rs_20": -4.6
   },
   {
    "symbol": "STB",
    "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
-   "price": 66.8,
-   "change_pct": -1.33,
+   "price": 67.3,
+   "change_pct": 0.75,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1197,23 +607,23 @@
   {
    "symbol": "SZC",
    "company_name": "Công ty cổ phần Sonadezi Châu Đức",
-   "price": 17.05,
-   "change_pct": 2.1,
+   "price": 17.15,
+   "change_pct": 0.59,
    "phase": "B",
    "tr_lo": 16.03,
    "tr_hi": 19.59,
-   "tr_age": 38,
+   "tr_age": 39,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": -4.4
+   "rs_20": -2.2
   },
   {
    "symbol": "TCB",
    "company_name": "Ngân hàng Thương mại Cổ phần Kỹ Thương Việt Nam - Techcombank",
-   "price": 32.3,
-   "change_pct": -0.46,
+   "price": 31.9,
+   "change_pct": -1.24,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1222,73 +632,73 @@
    "tr_kind": null,
    "last_event": "bc",
    "last_event_date": "2026-08-26",
-   "rs_20": 3.9
+   "rs_20": 3.6
   },
   {
    "symbol": "TCH",
    "company_name": "Công ty Cổ phần Đầu tư Dịch vụ Tài chính Hoàng Huy",
-   "price": 10.85,
-   "change_pct": -2.25,
+   "price": 10.5,
+   "change_pct": -3.23,
    "phase": "B",
    "tr_lo": 9.59,
    "tr_hi": 12.73,
-   "tr_age": 37,
+   "tr_age": 38,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "sc",
    "last_event_date": "2026-07-22",
-   "rs_20": -7.3
+   "rs_20": -8.7
   },
   {
    "symbol": "TPB",
    "company_name": "Ngân hàng Thương mại cổ phần Tiên Phong",
-   "price": 11.8,
-   "change_pct": 0.0,
+   "price": 11.6,
+   "change_pct": -1.69,
    "phase": "B",
    "tr_lo": 11.54,
    "tr_hi": 12.76,
-   "tr_age": 35,
+   "tr_age": 36,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": "st",
    "last_event_date": "2026-10-05",
-   "rs_20": 1.4
+   "rs_20": 0.6
   },
   {
    "symbol": "VCB",
    "company_name": "Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam ",
-   "price": 57.2,
-   "change_pct": -0.17,
+   "price": 56.6,
+   "change_pct": -1.05,
    "phase": "A",
    "tr_lo": 54.05,
    "tr_hi": 61.0,
-   "tr_age": 52,
+   "tr_age": 53,
    "tr_origin": "sc",
    "tr_kind": "acc",
    "last_event": "ar",
    "last_event_date": "2026-08-03",
-   "rs_20": 1.5
+   "rs_20": 0.9
   },
   {
    "symbol": "VCI",
    "company_name": "Công ty Cổ phần Chứng khoán Vietcap",
-   "price": 19.1,
-   "change_pct": -1.55,
+   "price": 18.55,
+   "change_pct": -2.88,
    "phase": "B",
    "tr_lo": 18.15,
    "tr_hi": 22.85,
-   "tr_age": 31,
+   "tr_age": 32,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": -6.1
+   "rs_20": -8.4
   },
   {
    "symbol": "VDS",
    "company_name": "Công ty Cổ phần Chứng khoán Rồng Việt (VDSC)",
-   "price": 9.66,
-   "change_pct": -1.02,
+   "price": 9.28,
+   "change_pct": -3.93,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1297,13 +707,13 @@
    "tr_kind": null,
    "last_event": "spring2",
    "last_event_date": "2026-09-17",
-   "rs_20": -13.2
+   "rs_20": -15.8
   },
   {
    "symbol": "VIB",
    "company_name": "Ngân hàng Thương mại Cổ phần Quốc tế Việt Nam",
-   "price": 13.9,
-   "change_pct": 2.96,
+   "price": 13.8,
+   "change_pct": -0.72,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1312,28 +722,28 @@
    "tr_kind": null,
    "last_event": "test",
    "last_event_date": "2026-02-23",
-   "rs_20": 5.7
+   "rs_20": 6.0
   },
   {
    "symbol": "VIX",
    "company_name": "CÔNG TY CỔ PHẦN CHỨNG KHOÁN VIX",
-   "price": 11.7,
-   "change_pct": -1.68,
+   "price": 11.3,
+   "change_pct": -3.42,
    "phase": "B",
    "tr_lo": 11.0,
    "tr_hi": 14.71,
-   "tr_age": 40,
+   "tr_age": 41,
    "tr_origin": "range",
    "tr_kind": "acc",
    "last_event": null,
    "last_event_date": null,
-   "rs_20": -10.4
+   "rs_20": -13.9
   },
   {
    "symbol": "VPB",
    "company_name": "Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng",
-   "price": 23.4,
-   "change_pct": 0.86,
+   "price": 23.45,
+   "change_pct": 0.21,
    "phase": "-",
    "tr_lo": null,
    "tr_hi": null,
@@ -1342,14 +752,14 @@
    "tr_kind": null,
    "last_event": "test",
    "last_event_date": "2026-02-13",
-   "rs_20": 12.2
+   "rs_20": 13.0
   }
  ],
  "stale": [],
  "summary": {
   "buy": 0,
   "exit": 0,
-  "watch": 1,
+  "watch": 0,
   "acc": 15,
   "dist": 1,
   "markup": 4,
@@ -1365,6 +775,11 @@
   "n_signals": 0
  },
  "history": [
+  {
+   "date": "2026-10-08",
+   "late": false,
+   "signals": []
+  },
   {
    "date": "2026-10-07",
    "late": false,
@@ -1461,7 +876,7 @@
      "price": 18.3,
      "push": false,
      "grade": "đo kém",
-     "r5": null,
+     "r5": -0.67,
      "r10": null
     },
     {
@@ -1472,7 +887,7 @@
      "price": 38.6,
      "push": false,
      "grade": null,
-     "r5": null,
+     "r5": -2.72,
      "r10": null
     },
     {
@@ -1483,7 +898,7 @@
      "price": 33.5,
      "push": false,
      "grade": null,
-     "r5": null,
+     "r5": 1.99,
      "r10": null
     }
    ]
@@ -1684,8 +1099,8 @@
      "price": 14.4,
      "push": false,
      "grade": null,
-     "r5": -8.7,
-     "r10": -12.16
+     "r5": -8.68,
+     "r10": -12.14
     }
    ]
   },
@@ -1885,8 +1300,8 @@
      "price": 15.1,
      "push": false,
      "grade": null,
-     "r5": -8.26,
-     "r10": -7.61
+     "r5": -8.31,
+     "r10": -7.63
     }
    ]
   },
@@ -1969,11 +1384,6 @@
   },
   {
    "date": "2026-08-25",
-   "late": false,
-   "signals": []
-  },
-  {
-   "date": "2026-08-24",
    "late": false,
    "signals": []
   }
