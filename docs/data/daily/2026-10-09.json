@@ -1,0 +1,26 @@
+{
+ "trade_date": "2026-10-09",
+ "generated_at": "2026-10-09T15:58:52+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "SHS",
+   "event": "sc",
+   "name": "Bán tháo cao trào (SC)",
+   "direction": "buy",
+   "price": 11.7,
+   "push": true,
+   "grade": "★"
+  },
+  {
+   "symbol": "VCI",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 18.55,
+   "push": true,
+   "grade": "★"
+  }
+ ],
+ "stale": []
+}
