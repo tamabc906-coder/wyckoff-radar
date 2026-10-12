@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-12",
+ "generated_at": "2026-10-12T16:02:07+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "HPG",
+   "event": "spring1",
+   "name": "Spring #1 / Shakeout",
+   "direction": "watch",
+   "price": 20.7,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
