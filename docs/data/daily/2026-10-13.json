@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-13",
+ "generated_at": "2026-10-13T16:00:31+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "TPB",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 11.7,
+   "push": true,
+   "grade": "★"
+  }
+ ],
+ "stale": []
+}
