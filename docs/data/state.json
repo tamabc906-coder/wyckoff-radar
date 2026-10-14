@@ -1,28 +1,26 @@
 {
- "last_run": "2026-10-13T16:00:31+07:00",
- "last_trade_date": "2026-10-13",
+ "last_run": "2026-10-14T16:13:55+07:00",
+ "last_trade_date": "2026-10-14",
  "dnse_error": "",
  "push": {
   "source": "fallback",
   "n_devices": 1,
-  "sent": 1,
+  "sent": 0,
   "gone": 0,
   "failed": 0,
   "errors": [],
-  "n_signals": 1
+  "n_signals": 0
  },
  "watchlist": {
   "n": 39,
   "source": "kingstock"
  },
- "last_signals": [
-  "TPB:spring2"
- ],
+ "last_signals": [],
  "devices": {
   "n": 1,
   "source": "fallback",
   "vapid": true,
-  "checked_at": "2026-10-13T18:38:10+07:00"
+  "checked_at": "2026-10-14T16:13:55+07:00"
  },
  "welcome": {
   "at": "2026-09-22T12:53:47+07:00",
