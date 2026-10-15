@@ -1,0 +1,26 @@
+{
+ "trade_date": "2026-10-15",
+ "generated_at": "2026-10-15T16:13:53+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "PVD",
+   "event": "spring2",
+   "name": "Spring #2 — rò rỉ đáy vùng",
+   "direction": "exit",
+   "price": 17.7,
+   "push": true,
+   "grade": "★"
+  },
+  {
+   "symbol": "EIB",
+   "event": "spring1",
+   "name": "Spring #1 / Shakeout",
+   "direction": "watch",
+   "price": 16.45,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
