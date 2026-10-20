@@ -1,0 +1,26 @@
+{
+ "trade_date": "2026-10-20",
+ "generated_at": "2026-10-20T16:15:19+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "CII",
+   "event": "ut",
+   "name": "Upthrust (UT)",
+   "direction": "watch",
+   "price": 13.2,
+   "push": false,
+   "grade": null
+  },
+  {
+   "symbol": "VCB",
+   "event": "st",
+   "name": "Kiểm tra thứ cấp (ST)",
+   "direction": "watch",
+   "price": 55.8,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
