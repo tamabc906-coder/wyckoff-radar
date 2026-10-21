@@ -1,0 +1,17 @@
+{
+ "trade_date": "2026-10-21",
+ "generated_at": "2026-10-21T17:48:43+07:00",
+ "late": false,
+ "signals": [
+  {
+   "symbol": "SHS",
+   "event": "ar",
+   "name": "Hồi phục tự động (AR)",
+   "direction": "watch",
+   "price": 12.9,
+   "push": false,
+   "grade": null
+  }
+ ],
+ "stale": []
+}
